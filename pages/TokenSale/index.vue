@@ -13,7 +13,7 @@
     name: "index",
     data () {
       return {
-        coins: ['JbCoin', 'PRSTCoin', 'CookeCoin']
+        coins: ['JbCoin', 'PRSTCoin', 'CookieCoin', 'BoyCoin']
       }
     }
   }

@@ -1,7 +1,8 @@
 <template>
     <div>
       <div class="container">
-        <span class="coinName">{{ $route.params.id }}</span>
+        <span class="coinName">{{ name }}</span>
+        <img :src="imageUrl">
         <div class="btmPart">
           <nuxt/>
         </div>
@@ -11,7 +12,13 @@
 
 <script>
   export default {
-    name: "_id"
+    name: "_id",
+    data () {
+      return {
+        name: this.$route.params.id,
+        imageUrl: require(`../../static/img/${this.$route.params.id}.png`)
+      }
+    }
   }
 </script>
 
