@@ -1,7 +1,7 @@
 <template>
   <div>
-    <span style="margin-right: 1rem;" @click="showQ">문의사항</span>
-    <span @click="showD">세부사항</span>
+    <el-button style="margin-right: 1rem;" @click="showQ">문의사항</el-button>
+    <el-button @click="showD">세부사항</el-button>
     <div v-if="Q">
       <h1>{{ $route.params.id }} Question</h1>
     </div>
