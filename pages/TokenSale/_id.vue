@@ -1,8 +1,8 @@
 <template>
     <div>
       <div class="container">
-        <span class="coinName">{{ name }}</span>
-        <img :src="imageUrl">
+        <div class="coinName">{{ name }}</div>
+        <img :src="imageUrl" style="margin-top: 1rem;">
         <div class="btmPart">
           <nuxt/>
         </div>

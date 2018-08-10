@@ -10,9 +10,14 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css',
+        integrity: 'sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossOrigin: 'anonymous'}
     ]
   },
+  plugins: [
+    {src: '~/plugins/element-ui.js', ssr: true}
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -21,6 +26,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['axios'],
     /*
     ** Run ESLint on save
     */
@@ -34,6 +40,19 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
+  ],
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/api/': { target: 'http://localhost:3000/api', pathRewrite: {'^/api/': ''}}
+  },
+  serverMiddleware: [
+    '~/api/index.js'
+  ]
 }
 
