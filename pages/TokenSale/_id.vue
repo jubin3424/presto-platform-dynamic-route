@@ -16,7 +16,16 @@
     data () {
       return {
         name: this.$route.params.id,
-        imageUrl: require(`../../static/img/${this.$route.params.id}.png`)
+        imageUrl: this.getImageUrl()
+      }
+    },
+    methods: {
+      getImageUrl () {
+        try {
+          return require(`../../static/img/${this.$route.params.id}.png`)
+        } catch(e) {
+          return require('../../static/img/no_image.png')
+        }
       }
     }
   }
@@ -26,7 +35,6 @@
   .container {
     width: 60%;
     margin: auto;
-    height: 70vh;
   }
   .coinName {
     font-size: 2rem;
@@ -36,5 +44,6 @@
   }
   .btmPart {
     margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 </style>

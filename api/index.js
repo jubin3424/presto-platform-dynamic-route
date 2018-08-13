@@ -15,11 +15,13 @@ mongoose.connect("mongodb://localhost:27017/presto-dynamic", { useNewUrlParser: 
 // Require API routes
 const users = require('./routes/users')
 const tokens = require('./routes/token')
+const comments = require('./routes/comment')
 
 // Import API routes
 app.use(bodyParser.json())
 app.use(users)
 app.use(tokens)
+app.use(comments)
 
 module.exports = {
   path: '/api',
