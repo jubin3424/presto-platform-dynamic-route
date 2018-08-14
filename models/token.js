@@ -10,7 +10,8 @@ let TokenSchema = new Schema({
     type: String,
     required: true,
   },
-  registered_at: Date
+  registered_at: Date,
+  progress: Number
 })
 
 let Token = mongoose.model("Token", TokenSchema)

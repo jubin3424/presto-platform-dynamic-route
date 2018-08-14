@@ -19,6 +19,9 @@ const comments = require('./routes/comment')
 
 // Import API routes
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
 app.use(users)
 app.use(tokens)
 app.use(comments)

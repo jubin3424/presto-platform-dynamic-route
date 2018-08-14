@@ -4,7 +4,7 @@ const router = Router()
 let Token = require('../../models/token')
 
 router.get('/tokens', (req, res) => {
-  Token.find({}, 'name type registered_at',
+  Token.find({}, 'name type registered_at progress',
     (error, tokens) => {
     if (error) {
       console.error(error)
@@ -21,7 +21,8 @@ router.post('/tokens/new', (req, res) => {
   let new_token = new Token({
     name: name,
     type: type,
-    registered_at: new Date()
+    registered_at: new Date(),
+    progress: 0
   })
   new_token.save((error) => {
     if (error) {

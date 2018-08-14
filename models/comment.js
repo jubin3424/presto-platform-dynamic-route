@@ -6,10 +6,11 @@ let CommentSchema = new Schema({
   token: String,
   content: String,
   created_at: Date,
-  answered: {
-    type: Boolean,
-    default: false
-  }
+  answer: [{
+    content: String,
+    answered_by: String,
+    answered_written_at: Date
+  }]
 })
 
 let Comment = mongoose.model("Comment", CommentSchema)
