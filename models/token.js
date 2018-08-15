@@ -11,7 +11,8 @@ let TokenSchema = new Schema({
     required: true,
   },
   registered_at: Date,
-  progress: Number
+  total_amount: Number,
+  token_purchased: Number
 })
 
 let Token = mongoose.model("Token", TokenSchema)

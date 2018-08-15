@@ -17,7 +17,7 @@
       <div v-if="comments.length > 0">
         <div v-for="(comment, index) in comments" :key=index class="comment">
           <span class="comment_writer">{{ comment.user }}</span>
-          <span v-if="comment.answer[0]" class="answered">Answered</span>
+          <span v-if="comment.answer[0] && comment.answer[0].content" class="answered">Answered</span>
           <span v-else class="unanswered">Unanswered</span>
           <span class="comment_date">
             {{ comment.created_at | moment }}<br>
@@ -94,7 +94,7 @@
         await this.getComments()
       },
       async addComment () {
-        if (confirm('답변을 등록하시겠습니까?')) {
+        if (confirm('질문을 등록하시겠습니까?')) {
           await this.$axios.$post('/api/comments/new',
             { user: '너와나의갭', content: this.content, token: this.$route.params.id})
             .then((response) => {

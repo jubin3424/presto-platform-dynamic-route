@@ -6,6 +6,9 @@
         <el-form-item label="TokenName">
           <el-input v-model="name"></el-input>
         </el-form-item>
+        <el-form-item label="TotalGenerated">
+          <el-input v-model="total_amount"></el-input>
+        </el-form-item>
         <el-form-item label="Type"><br>
           <el-radio v-model="type" label="ICO">ICO</el-radio>
           <el-radio v-model="type" label="DAICO">DAICO</el-radio>
@@ -24,15 +27,15 @@
     data() {
       return {
         name: '',
-        type: '',
-        selectedFile: ''
+        total_amount: '',
+        type: ''
       }
     },
     methods: {
       async addToken() {
         if (confirm('토큰을 추가하시겠습니까?')) {
           await this.$axios.$post('/api/tokens/new',
-            {name: this.name, type: this.type})
+            {name: this.name, total_amount: this.total_amount, type: this.type})
             .then((response) => {
               console.log(response.message)
               this.$router.push('/tokensale')
