@@ -2,11 +2,11 @@
     <div>
       <div class="container">
         <el-row :gutter="20">
-          <el-col :span="8" v-for="(token, index) in tokens" :key="index">
+          <el-col :xs="24" :sm="12" :md="8" v-for="(token, index) in tokens" :key="index">
             <el-card :body-style="{ padding: '0rem' }">
               <el-row :gutter="10">
                 <el-col :span="24">
-                  <img :src="getImageUrl(token.name)" class="image" style="">
+                  <img :src="getImageUrl(token.name)" class="image" style="height: 310px">
                 </el-col>
                 <el-col :span="24">
                   <span style="float: right; margin-right: 5px; font-size: 0.6rem; color: crimson">{{ token.type }}</span>
@@ -18,11 +18,14 @@
               </el-row>
               <div style="padding: 10px 0.8rem 0.8rem;">
                 <span style="font-size: 0.9rem; color: gray">진행률</span>
-                <el-progress :percentage="token.progress"></el-progress>
+                <el-progress :width="100" :show-text="false" :percentage="cal(token.token_purchased, token.total_amount)"
+                             style="padding-top: 5px; padding-bottom: 5px;"></el-progress>
+                <span style="font-size: 0.9rem; color: gray">
+                  {{ cal(token.token_purchased, token.total_amount) }}%
+                </span>
                 <div class="bottom clearfix">
-                  <div class="time">{{ token.registered_at | moment }}</div>
-                  <el-button class="button">
-                    <nuxt-link :to="'tokensale/' + token.name">둘러보기</nuxt-link>
+                  <div class="time">발행일자: {{ token.registered_at | moment }}</div>
+                  <el-button class="button" @click="goToPage(token.name)">둘러보기
                   </el-button>
                 </div>
               </div>
@@ -60,6 +63,12 @@
         } catch(e) {
           return require('../../static/img/no_image.png')
         }
+      },
+      cal(tp, ta) {
+        return ((tp/ta)*100).toFixed(2)
+      },
+      async goToPage(name) {
+        await this.$router.push(name)
       }
     },
     filters: {
@@ -93,5 +102,11 @@
     font-size: 13px;
     color: #999;
     margin-bottom: 7px;
+    margin-top: 7px;
+  }
+  @media(max-width: 768px) {
+    .container {
+      width: 100%;
+    }
   }
 </style>

@@ -15,6 +15,18 @@ router.get('/tokens', (req, res) => {
     }).sort({_id: -1})
 })
 
+router.get('/tokens/:name', (req, res) => {
+  Token.find({'name': req.params.name}, 'name type registered_at total_amount token_purchased',
+    (error, token) => {
+    if (error) {
+      console.error(error)
+    }
+    res.send({
+      token: token
+    })
+    })
+})
+
 router.post('/tokens/new', (req, res) => {
   let name = req.body.name
   let type = req.body.type
@@ -32,9 +44,23 @@ router.post('/tokens/new', (req, res) => {
     }
     res.send({
       success: true,
-      message: 'Token saved Sucessfully'
+      message: 'Token saved Successfully'
     })
   })
 })
 
+router.put('/tokens/purchase/:token', (req, res) => {
+  Token.findOne({'name': req.params.token}, 'token_purchased', (error, token) => {
+    if (error) { console.log(error) }
+    console.log(token)
+    token.token_purchased = token.token_purchased + req.body.token_purchased
+    token.save((error) => {
+      if (error) { console.log(error) }
+      res.send({
+        success: true,
+        message: 'Token Purchased Successfully'
+      })
+    })
+  })
+})
 module.exports = router

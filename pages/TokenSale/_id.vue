@@ -2,7 +2,16 @@
     <div>
       <div class="container">
         <div class="coinName">{{ name }}</div>
-        <img :src="imageUrl" style="margin-top: 1rem;">
+        <el-row :gutter="20">
+          <el-col :xs="24" :sm="12" style="overflow: hidden;">
+            <img :src="imageUrl" style="margin-top: 1rem; height: 390px;">
+          </el-col>
+          <el-col :xs="24" :sm="12">
+            <div class="token-market">
+              <token></token>
+            </div>
+          </el-col>
+        </el-row>
         <div class="btmPart">
           <nuxt/>
         </div>
@@ -11,6 +20,7 @@
 </template>
 
 <script>
+  import Token from '../../components/TokenPurchase'
   export default {
     name: "_id",
     data () {
@@ -27,13 +37,16 @@
           return require('../../static/img/no_image.png')
         }
       }
+    },
+    components: {
+      'token': Token
     }
   }
 </script>
 
 <style scoped>
   .container {
-    width: 60%;
+    width: 80%;
     margin: auto;
   }
   .coinName {
@@ -45,5 +58,20 @@
   .btmPart {
     margin-top: 1rem;
     margin-bottom: 3rem;
+  }
+  .token-market {
+    background-color: whitesmoke;
+    padding: 0.1rem 0.1rem 0rem 0.1rem;
+    margin-top: 1rem;
+    height:390px;
+  }
+  @media(max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+    .token-market {
+      background-color: ghostwhite;
+      margin-top: 0.4rem;
+    }
   }
 </style>

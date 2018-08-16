@@ -1,28 +1,28 @@
 <template>
-    <div class="container">
-      <h1 style="text-align: center;">Token Purchase Page</h1>
-      <div class="token-counter">
-        <el-form class="purchase-form">
-          <el-form-item label="TokenName"><br>
-            <el-select v-model="value" placeholder="Select">
-              <el-option v-for="(token, index) in tokens"
-                :key="index"
-                :label="token.name"
-                :value="token.name">
-              </el-option>
-            </el-select>
-          </el-form-item>
-          <el-form-item label="Amount(1000단위)"><br>
-            <el-slider
-              v-model="amount"
-              show-input>
-            </el-slider>
-            <el-input v-model="total" style="margin-top: 7px;"></el-input>
-          </el-form-item>
-          <el-button @click="purchaseToken(getCurrentToken())">구입하기</el-button>
-        </el-form>
-      </div>
+  <div class="container">
+    <h2 style="text-align: center;">{{ this.value }} Purchase Page</h2>
+    <div class="token-counter">
+      <el-form class="purchase-form">
+        <el-form-item label="TokenName"><br>
+          <el-select v-model="value" disabled :placeholder="value">
+            <el-option v-for="(token, index) in tokens"
+                       :key="index"
+                       :label="token.name"
+                       :value="token.name">
+            </el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="Amount(1000단위)"><br>
+          <el-slider
+            v-model="amount"
+            show-input>
+          </el-slider>
+          <el-input v-model="total" style="margin-top: 7px;"></el-input>
+        </el-form-item>
+        <el-button @click="purchaseToken(getCurrentToken())">구입하기</el-button>
+      </el-form>
     </div>
+  </div>
 </template>
 
 <script>
@@ -31,7 +31,7 @@
     data () {
       return {
         tokens: '',
-        value: '',
+        value: this.$route.params.id,
         amount: 0,
         total: '',
         getName: ''
@@ -56,7 +56,7 @@
               alert('오류가 발생했습니다')
             })
         }
-        this.$router.push('complete')
+        this.$router.push({name: 'Complete'})
       },
       getCurrentToken() {
         return this.value
@@ -72,12 +72,11 @@
 
 <style scoped>
   .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 3rem;
   }
   .purchase-form {
-    width: 50%;
+    width: 90%;
     margin: auto;
   }
 </style>

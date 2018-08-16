@@ -13,6 +13,8 @@
           style="width: 85%;">
         </el-input>
         <el-button @click="addComment" style="float: right; margin-top: 1rem;" class="hidden-xs-only">제출</el-button>
+        <el-button @click="addComment" style="float: right; margin-left: 2px; width: 14%;
+        padding-top: 29px; padding-bottom: 29px; padding-left: 12px;" class="hidden-sm-and-up">제출</el-button>
       </el-form>
       <div v-if="comments.length > 0">
         <div v-for="(comment, index) in comments" :key=index class="comment">
@@ -205,4 +207,5 @@
   .nonActive {
     display: none;
   }
+
 </style>
