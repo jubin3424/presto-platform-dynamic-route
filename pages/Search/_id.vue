@@ -8,11 +8,11 @@
         <div v-for="(token, index) in token" :key="index">
           <el-col :xs="24" :sm="6">
             <div class="item">
-              <img :src="getImageUrl(token.imageUrl)"
-                   style="width: 130px; height: 130px; cursor: pointer;" @click="goTo(token.name)">
-              <div style="margin-top: 2px; font-size: 0.5rem; color: cornflowerblue">{{ token.type }}</div>
-              <div style="margin-top: 2px; font-size: 1.1rem; cursor: pointer;" @click="goTo(token.name)">{{ token.name }}</div>
-              <div style="font-size: 0.7rem; color: gray; margin-top: 3px;">{{ token.registered_at | moment }}</div>
+              <img :src="getImageUrl(token.imageUrl)" class="searchImage"
+                   style="cursor: pointer;" @click="goTo(token.name)">
+              <div class="type">{{ token.type }}</div>
+              <div class="name" @click="goTo(token.name)">{{ token.name }}</div>
+              <div class="registered_at">{{ token.registered_at | moment }}</div>
             </div>
           </el-col>
         </div>
@@ -70,7 +70,36 @@
     font-style: italic;
     margin-right: 5px;
   }
+  .searchImage {
+    width: 130px;
+    height: 130px;
+  }
   .item {
     text-align: center;
+    margin-bottom: 0.7rem;
+  }
+  .type {
+    margin-top: 2px;
+    font-size: 0.5rem;
+    color: cornflowerblue
+  }
+  .name {
+    margin-top: 2px; font-size: 1.1rem; cursor: pointer;
+  }
+  .registered_at {
+    font-size: 0.7rem; color: gray; margin-top: 3px;
+  }
+  @media(max-width: 768px) {
+    .searchImage {
+      width:100%;
+      height: 150px;
+    }
+    .type {
+      font-size: 1rem;
+      text-align: right;
+    }
+    .name {
+      font-size: 1.7rem;
+    }
   }
 </style>

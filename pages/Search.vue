@@ -31,6 +31,7 @@
   @media(max-width: 768px) {
     .container {
       width: 100%;
+      margin-bottom: 1rem;
     }
   }
 </style>

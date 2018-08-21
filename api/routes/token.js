@@ -42,7 +42,7 @@ router.get('/tokens/:name', (req, res) => {
 })
 
 router.get('/tokens/search/:name', (req, res) => {
-  Token.find({name: {'$regex': `^${req.params.name}`, '$options': 'i'}}, 'name type registered_at total_amount token_purchased imageUrl',
+  Token.find({name: { $regex: req.params.name, '$options': 'i'}}, 'name type registered_at total_amount token_purchased imageUrl',
     (error, token) => {
       if (error) {
         console.error(error)
