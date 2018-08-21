@@ -12,7 +12,8 @@ let TokenSchema = new Schema({
   },
   registered_at: Date,
   total_amount: Number,
-  token_purchased: Number
+  token_purchased: Number,
+  imageUrl: String
 })
 
 let Token = mongoose.model("Token", TokenSchema)

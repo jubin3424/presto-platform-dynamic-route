@@ -4,6 +4,7 @@
       <nuxt-link to="/"><h1 style="color: mediumpurple">Header</h1></nuxt-link>
       <nuxt-link :to="{ name: 'TokenSale' }">TokenSale</nuxt-link>&nbsp;&nbsp;
       <nuxt-link to="/tokenregister">TokenRegister</nuxt-link>&nbsp;&nbsp;
+      <nuxt-link to="/search">Search</nuxt-link>
     </div>
     <nuxt/>
     <div class="footer">

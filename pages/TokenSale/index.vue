@@ -6,7 +6,7 @@
             <el-card :body-style="{ padding: '0rem' }">
               <el-row :gutter="10">
                 <el-col :span="24">
-                  <img :src="getImageUrl(token.name)" class="image" style="height: 310px">
+                  <img :src="getImageUrl(token.imageUrl)" class="image" style="height: 310px">
                 </el-col>
                 <el-col :span="24">
                   <span style="float: right; margin-right: 5px; font-size: 0.6rem; color: crimson">{{ token.type }}</span>
@@ -18,7 +18,7 @@
               </el-row>
               <div style="padding: 10px 0.8rem 0.8rem;">
                 <span style="font-size: 0.9rem; color: gray">진행률</span>
-                <el-progress :width="100" :show-text="false" :percentage="cal(token.token_purchased, token.total_amount)"
+                <el-progress :width="100" :show-text="false" :percentage="parseInt(cal(token.token_purchased, token.total_amount))"
                              style="padding-top: 5px; padding-bottom: 5px;"></el-progress>
                 <span style="font-size: 0.9rem; color: gray">
                   {{ cal(token.token_purchased, token.total_amount) }}%
@@ -27,6 +27,7 @@
                   <div class="time">발행일자: {{ token.registered_at | moment }}</div>
                   <el-button class="button" @click="goToPage(token.name)">둘러보기
                   </el-button>
+                  <el-button @click="deleteToken(token._id)">삭제하기</el-button>
                 </div>
               </div>
             </el-card>
@@ -57,9 +58,22 @@
         const getTokens = await this.$axios.$get('/api/tokens')
         this.tokens = getTokens.tokens
       },
+      async refreshTokens () {
+        await this.getTokens()
+      },
+      async deleteToken(id) {
+        await this.$axios.$delete('/api/tokens/delete/' + id, {id: id})
+          .then((response) => {
+            alert(response.message)
+          })
+          .catch((response) => {
+            alert(response)
+          })
+        await this.refreshTokens()
+      },
       getImageUrl (name) {
         try {
-          return require(`../../static/img/${name}.png`)
+          return require(`../../upload/${name}`)
         } catch(e) {
           return require('../../static/img/no_image.png')
         }
@@ -68,7 +82,7 @@
         return ((tp/ta)*100).toFixed(2)
       },
       async goToPage(name) {
-        await this.$router.push(name)
+        await this.$router.push('/TokenSale/'+name)
       }
     },
     filters: {

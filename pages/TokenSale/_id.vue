@@ -1,10 +1,10 @@
 <template>
     <div>
       <div class="container">
-        <div class="coinName">{{ name }}</div>
+        <div class="coinName" @click="getTokenInfo">{{ this.tokenInfo.name }}</div>
         <el-row :gutter="20">
           <el-col :xs="24" :sm="12" style="overflow: hidden;">
-            <img :src="imageUrl" style="margin-top: 1rem; height: 390px;">
+            <img :src="getImageUrl(this.tokenInfo.imageUrl)" style="margin-top: 1rem; height: 390px;">
           </el-col>
           <el-col :xs="24" :sm="12">
             <div class="token-market">
@@ -26,16 +26,27 @@
     data () {
       return {
         name: this.$route.params.id,
-        imageUrl: this.getImageUrl()
+        imagePath: '',
+        imageUrl: this.getImageUrl(),
+        tokenInfo: '',
       }
     },
+    created () {
+      this.getTokenInfo()
+      this.getImageUrl()
+    },
     methods: {
-      getImageUrl () {
+      getImageUrl (name) {
         try {
-          return require(`../../static/img/${this.$route.params.id}.png`)
+          return require(`../../upload/${name}`)
         } catch(e) {
           return require('../../static/img/no_image.png')
         }
+      },
+      async getTokenInfo () {
+        const getTokens = await this.$axios.$get('/api/tokens/' + this.name)
+        this.tokenInfo = getTokens.token[0]
+        this.imagePath = this.tokenInfo.imageUrl
       }
     },
     components: {

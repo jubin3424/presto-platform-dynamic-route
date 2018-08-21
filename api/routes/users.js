@@ -3,7 +3,8 @@ const router = Router()
 
 const users = [
   { user: 'Jubin', contents: '언제 상장되나요?', created_at: '2018-08-07' },
-  { user: 'Joobin', contents: '코인이 오를까요??', created_at: '2018-08-06' }
+  { user: 'Joobin', contents: '코인이 오를까요??', created_at: '2018-08-06' },
+  { user: 'SoooChuls', contents: 'ㅂㄱㅅㄴㅇ??', created_at: '2018-08-20' }
 ]
 
 router.get('/users', (req, res, next) => {
