@@ -1,7 +1,8 @@
 <template>
   <div>
     <el-button style="margin-right: 1rem;" @click="showQ">문의사항</el-button>
-    <el-button @click="showD">세부사항</el-button>
+    <el-button style="margin-right: 1rem;" @click="showD">세부사항</el-button>
+    <el-button @click="showP">공지사항</el-button>
     <div v-if="Q">
       <h1>{{ $route.params.id }} Question</h1>
       <el-form>
@@ -50,7 +51,8 @@
             <span class="answer_writer">{{ comment.answer[0].answered_by }}</span>
             <span class="comment_date">
                 {{ comment.answer[0].answered_written_at | moment }}</span><br>
-            <div class="answer_contents">{{ comment.answer[0].content }}</div>
+            <div class="answer_contents">
+              <pre>{{ comment.answer[0].content }}</pre></div>
           </div>
         </div>
     </div>
@@ -61,6 +63,9 @@
     </div>
     <div v-if="D">
       <h1>{{ $route.params.id }} Detail</h1>
+    </div>
+    <div v-if="P">
+      <h1>{{ $route.params.id }} Notice</h1>
     </div>
   </div>
 </template>
@@ -73,6 +78,7 @@
       return {
         Q: true,
         D: false,
+        P: false,
         content: '',
         comments: '',
         answerArea: '',
@@ -150,10 +156,17 @@
       showQ () {
         this.Q = true
         this.D = false
+        this.P = false
       },
       showD () {
         this.Q = false
         this.D = true
+        this.P = false
+      },
+      showP () {
+        this.Q = false
+        this.D = false
+        this.P = true
       },
       isAnswered (result) {
         if (result === '')
@@ -203,6 +216,10 @@
     font-weight: bolder;
     color: mediumpurple;
     margin-left: 2px;
+  }
+  .answer_contents {
+    padding-top: 0.2rem;
+    padding-left: 1.3rem;
   }
   .nonActive {
     display: none;

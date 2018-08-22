@@ -118,6 +118,12 @@
     margin-bottom: 7px;
     margin-top: 7px;
   }
+  .el-card.is-always-shadow {
+    box-shadow: 0 0 0 0;
+  }
+  .el-card:hover {
+    -webkit-box-shadow: 0 2px 12px 0 silver;
+  }
   @media(max-width: 768px) {
     .container {
       width: 100%;

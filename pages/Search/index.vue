@@ -2,7 +2,7 @@
     <div>
       <el-form>
         <el-form-item label="TokenName">
-          <el-input v-model="tokenName" placeholder="Search Token"></el-input>
+          <el-input v-model="tokenName" placeholder="Search Token" @keyup.enter.native="searchToken"></el-input>
         </el-form-item>
         <el-button @click="searchToken">검색</el-button>
       </el-form>

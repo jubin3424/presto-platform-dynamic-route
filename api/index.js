@@ -18,6 +18,7 @@ mongoose.connect("mongodb://localhost:27017/presto-dynamic", { useNewUrlParser: 
 const users = require('./routes/users')
 const tokens = require('./routes/token')
 const comments = require('./routes/comment')
+const posts = require('./routes/post')
 const upload = require('./routes/upload')
 
 // Import API routes
@@ -30,7 +31,7 @@ app.use(users)
 app.use(tokens)
 app.use(comments)
 app.use(upload)
-
+app.use(posts)
 
 
 module.exports = {

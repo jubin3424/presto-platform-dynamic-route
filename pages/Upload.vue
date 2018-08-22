@@ -16,10 +16,6 @@
             <img width="100%" :src="dialogImageUrl">
           </el-dialog><br>
         </el-form>
-        <!--<form action="http://127.0.0.1:3000/api/upload" method='post' enctype="multipart/form-data">-->
-          <!--<input type='file' name='upload' id='upload' />-->
-          <!--<input type='submit' name='sub' value='업로드'/>-->
-        <!--</form>-->
       </div>
     </div>
 </template>

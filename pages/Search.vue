@@ -20,7 +20,7 @@
 
 <style scoped>
   .container {
-    width: 80%;
+    width: 60%;
     margin: auto auto 3rem;
   }
   .searchFixed {
