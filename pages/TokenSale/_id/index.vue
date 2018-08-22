@@ -129,7 +129,6 @@
         token: this.$route.params.id,
         user: '',
         activeNames: [],
-        dialogVisible: false
       }
     },
     created () {
@@ -222,9 +221,6 @@
       showAnswerForm(index) {
         this.num = index
       },
-      showPostForm() {
-        this.isShow = !this.isShow
-      },
       showQ (name) {
         this.$router.push(name+'/Question')
         this.Q = true
@@ -241,11 +237,6 @@
         this.D = false
         this.P = true
       },
-      isAnswered (result) {
-        if (result === '')
-          return false
-        else true
-      }
     },
     filters: {
       moment(date) {
