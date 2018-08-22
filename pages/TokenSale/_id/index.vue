@@ -65,21 +65,26 @@
       <h1>{{ $route.params.id }} Detail</h1>
     </div>
     <div v-if="P">
-      <h1>{{ $route.params.id }} Notice</h1>
-      <div class="post_form">
-        <el-form>
-          <el-form-item label="User" style="margin-bottom: 0.3rem;"><br>
-            <el-input v-model="user" class="title-input" placeholder="아이디를 입력해주세요."></el-input>
-          </el-form-item>
-          <el-form-item label="Title" style="margin-bottom: 0.3rem;"><br>
-            <el-input v-model="title" class="title-input" placeholder="제목을 입력해주세요."></el-input>
-          </el-form-item>
-          <el-form-item label="Content">
-            <el-input type="textarea" :rows="6" v-model="postContent" placeholder="내용을 입력해주세요."></el-input>
-          </el-form-item>
-          <el-button @click="addNotice">Register</el-button>
-        </el-form>
-      </div>
+      <h1 style="display: inline-block;">{{ $route.params.id }} Notice</h1>&nbsp;&nbsp;&nbsp;
+      <el-collapse v-model="activeNames">
+        <el-collapse-item :title="'공지사항 작성'+'('+$route.params.id+')'" name="1">
+          <div class="post_form">
+            <el-form>
+              <el-form-item label="User" style="margin-bottom: 0.3rem;"><br>
+                <el-input v-model="user" class="title-input" placeholder="아이디를 입력해주세요."></el-input>
+              </el-form-item>
+              <el-form-item label="Title" style="margin-bottom: 0.3rem;"><br>
+                <el-input v-model="title" class="title-input" placeholder="제목을 입력해주세요."></el-input>
+              </el-form-item>
+              <el-form-item label="Content">
+                <el-input type="textarea" :rows="6" v-model="postContent" placeholder="내용을 입력해주세요."></el-input>
+              </el-form-item>
+              <el-button @click="addNotice">Register</el-button>
+            </el-form>
+          </div>
+        </el-collapse-item>
+      </el-collapse>
+
       <div v-if="posts.length > 0">
         <div v-for="(post, index) in posts" :key="index">
           <div class="post">
@@ -116,10 +121,12 @@
         num: '',
         nonActive: 'nonActive',
         textarea: '',
+        isShow: false,
         title: '',
         postContent: '',
         token: this.$route.params.id,
-        user: ''
+        user: '',
+        activeNames: []
       }
     },
     created () {
@@ -211,6 +218,9 @@
       },
       showAnswerForm(index) {
         this.num = index
+      },
+      showPostForm() {
+        this.isShow = !this.isShow
       },
       showQ () {
         this.Q = true
