@@ -66,6 +66,22 @@
     </div>
     <div v-if="P">
       <h1>{{ $route.params.id }} Notice</h1>
+      <div v-if="posts.length > 0">
+        <div v-for="(post, index) in posts" :key="index">
+          <div class="post">
+            <div class="title">
+              {{ post.title }}
+            </div>
+            <span>By </span>
+            <span class="written_by">{{ post.user }}</span>
+            <span class="post_date">{{ post.created_at|moment2 }}</span>
+            <hr style="border-color: ghostwhite; color: ghostwhite; opacity: 0.3; margin-top: 1.2rem;">
+          </div>
+        </div>
+    </div>
+      <div v-else>
+        <h1>등록된 공지사항이 없습니다.</h1>
+      </div>
     </div>
   </div>
 </template>
@@ -81,6 +97,7 @@
         P: false,
         content: '',
         comments: '',
+        posts: '',
         answerArea: '',
         num: '',
         nonActive: 'nonActive',
@@ -89,6 +106,7 @@
     },
     created () {
       this.getComments()
+      this.getPosts()
     },
     methods: {
       moment () {
@@ -100,6 +118,10 @@
       },
       async refreshComments () {
         await this.getComments()
+      },
+      async getPosts () {
+        const getPosts = await this.$axios.$get(`/api/posts/${this.$route.params.id}`)
+        this.posts = getPosts.posts
       },
       async addComment () {
         if (confirm('질문을 등록하시겠습니까?')) {
@@ -177,6 +199,9 @@
     filters: {
       moment(date) {
         return moment(date).format('YYYY-MM-DD h:mm:ss a')
+      },
+      moment2(date) {
+        return moment(date).format('MMM DD. YYYY')
       }
     }
   }
@@ -223,6 +248,21 @@
   }
   .nonActive {
     display: none;
+  }
+  .title {
+    font-size: 17px;
+    margin-bottom: 3px;
+    margin-top: 1.5rem;
+  }
+  .written_by {
+    color: #6464f5;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+  }
+  .post_date {
+    font-size: 14px;
+    color: #7f828b;
   }
 
 </style>
