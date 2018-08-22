@@ -1,8 +1,9 @@
 <template>
   <div>
-    <el-button style="margin-right: 1rem;" @click="showQ">문의사항</el-button>
+    <el-button style="margin-right: 1rem;" @click="showQ(token)">문의사항</el-button>
     <el-button style="margin-right: 1rem;" @click="showD">세부사항</el-button>
     <el-button @click="showP">공지사항</el-button>
+    <nuxt/>
     <div v-if="Q">
       <h1>{{ $route.params.id }} Question</h1>
       <el-form>
@@ -224,7 +225,8 @@
       showPostForm() {
         this.isShow = !this.isShow
       },
-      showQ () {
+      showQ (name) {
+        this.$router.push(name+'/Question')
         this.Q = true
         this.D = false
         this.P = false

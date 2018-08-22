@@ -13,6 +13,9 @@
           </el-col>
         </el-row>
         <div class="btmPart">
+          <el-button style="margin-right: 1rem;" @click="showQ(name)">문의사항</el-button>
+          <el-button style="margin-right: 1rem;" @click="showD(name)">세부사항</el-button>
+          <el-button @click="showP(name)">공지사항</el-button>
           <nuxt/>
         </div>
       </div>
@@ -47,6 +50,15 @@
         const getTokens = await this.$axios.$get('/api/tokens/' + this.name)
         this.tokenInfo = getTokens.token[0]
         this.imagePath = this.tokenInfo.imageUrl
+      },
+      showQ (name) {
+        this.$router.push('/TokenSale/'+name+'/Question')
+      },
+      showD (name) {
+        this.$router.push('/TokenSale/'+name+'/Detail')
+      },
+      showP (name) {
+        this.$router.push('/TokenSale/'+name+'/Post')
       }
     },
     components: {
