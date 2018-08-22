@@ -66,6 +66,20 @@
     </div>
     <div v-if="P">
       <h1>{{ $route.params.id }} Notice</h1>
+      <div class="post_form">
+        <el-form>
+          <el-form-item label="User" style="margin-bottom: 0.3rem;"><br>
+            <el-input v-model="user" class="title-input" placeholder="아이디를 입력해주세요."></el-input>
+          </el-form-item>
+          <el-form-item label="Title" style="margin-bottom: 0.3rem;"><br>
+            <el-input v-model="title" class="title-input" placeholder="제목을 입력해주세요."></el-input>
+          </el-form-item>
+          <el-form-item label="Content">
+            <el-input type="textarea" :rows="6" v-model="postContent" placeholder="내용을 입력해주세요."></el-input>
+          </el-form-item>
+          <el-button @click="addNotice">Register</el-button>
+        </el-form>
+      </div>
       <div v-if="posts.length > 0">
         <div v-for="(post, index) in posts" :key="index">
           <div class="post">
@@ -101,7 +115,11 @@
         answerArea: '',
         num: '',
         nonActive: 'nonActive',
-        textarea: ''
+        textarea: '',
+        title: '',
+        postContent: '',
+        token: this.$route.params.id,
+        user: ''
       }
     },
     created () {
@@ -118,6 +136,9 @@
       },
       async refreshComments () {
         await this.getComments()
+      },
+      async refreshPosts () {
+        await this.getPosts()
       },
       async getPosts () {
         const getPosts = await this.$axios.$get(`/api/posts/${this.$route.params.id}`)
@@ -139,6 +160,22 @@
             message: '성공적으로 등록되었습니다.',
             type: 'success'
           })
+        }
+      },
+      async addNotice () {
+        if (confirm('공지사항을 등록하시겠습니까?')) {
+          await this.$axios.$post('/api/posts/new',
+            { token: this.token, user: this.user, title: this.title, content: this.content})
+            .then((response) => {
+              console.log(response.message)
+              this.user = ""
+              this.title = ""
+              this.postContent = ""
+            })
+            .catch((response) => {
+              alert('오류가 발생했습니다.')
+            })
+          await this.refreshPosts()
         }
       },
       async deleteComment (id) {
@@ -263,6 +300,13 @@
   .post_date {
     font-size: 14px;
     color: #7f828b;
+  }
+  /*post form*/
+  .post_form {
+    width: 70%;
+  }
+  .title-input {
+    width: 70%;
   }
 
 </style>
