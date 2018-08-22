@@ -88,12 +88,13 @@
       <div v-if="posts.length > 0">
         <div v-for="(post, index) in posts" :key="index">
           <div class="post">
-            <div class="title">
+            <div class="title" style="cursor: pointer;">
               {{ post.title }}
             </div>
+
             <span>By </span>
             <span class="written_by">{{ post.user }}</span>
-            <span class="post_date">{{ post.created_at|moment2 }}</span>
+            <span class="post_date">{{ post.created_at | moment2 }}</span>
             <hr style="border-color: ghostwhite; color: ghostwhite; opacity: 0.3; margin-top: 1.2rem;">
           </div>
         </div>
@@ -126,7 +127,8 @@
         postContent: '',
         token: this.$route.params.id,
         user: '',
-        activeNames: []
+        activeNames: [],
+        dialogVisible: false
       }
     },
     created () {
@@ -172,7 +174,7 @@
       async addNotice () {
         if (confirm('공지사항을 등록하시겠습니까?')) {
           await this.$axios.$post('/api/posts/new',
-            { token: this.token, user: this.user, title: this.title, content: this.content})
+            { token: this.token, user: this.user, title: this.title, content: this.postContent})
             .then((response) => {
               console.log(response.message)
               this.user = ""
@@ -298,7 +300,7 @@
   }
   .title {
     font-size: 17px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     margin-top: 1.5rem;
   }
   .written_by {
