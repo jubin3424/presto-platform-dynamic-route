@@ -7,7 +7,11 @@
         by <span style="color: slateblue; font-weight: bolder;">{{ this.detail.user }}</span>
         <span style="color: silver; margin-left: 0.5rem;">{{ this.detail.created_at | moment }}</span>
       </div>
-      <div class="post_content">{{ this.detail.content }}</div>
+      <div class="post_content">{{ this.detail.content }}
+      </div>
+      <div style="text-align: right;">
+        <el-button type="success" @click="$router.go(-1)">목록보기</el-button>
+      </div>
     </div>
 </template>
 
@@ -47,5 +51,10 @@
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid silver;
+  }
+  .post_content {
+    padding-top: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 </style>

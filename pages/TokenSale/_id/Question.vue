@@ -1,21 +1,24 @@
 <template>
     <div>
-      <h1>{{ $route.params.id }} Question</h1>
+      <h2 style="margin-bottom: 0.5rem;">Ask anything to {{ $route.params.id }} Team</h2>
       <el-form>
         <el-input
           type="textarea"
           :rows="3"
           placeholder="질문을 입력해주세요."
-          v-model="content"
-          style="width: 85%;">
+          v-model="content">
         </el-input>
         <el-button @click="addComment" style="float: right; margin-top: 1rem;" class="hidden-xs-only">제출</el-button>
         <el-button @click="addComment" style="float: right; margin-left: 2px; width: 14%;
         padding-top: 29px; padding-bottom: 29px; padding-left: 12px;" class="hidden-sm-and-up">제출</el-button>
       </el-form>
+      <div class="below-question">
+        <p style="margin-top: 1rem;">* Written questions can not be edited.</p>
+        <p>* The questions will be answered directly by the token team.</p>
+      </div>
       <div v-if="comments.length > 0">
         <div v-for="(comment, index) in comments" :key=index class="comment">
-          <span class="comment_writer">{{ comment.user }}</span>
+          <span class="comment_writer" style="font-weight: bolder;">{{ comment.user }}</span>
           <span v-if="comment.answer[0] && comment.answer[0].content" class="answered">Answered</span>
           <span v-else class="unanswered">Unanswered</span>
           <span class="comment_date">
@@ -47,8 +50,7 @@
             <span class="answer_writer">{{ comment.answer[0].answered_by }}</span>
             <span class="comment_date">
                 {{ comment.answer[0].answered_written_at | moment }}</span><br>
-            <div class="answer_contents">
-              <pre>{{ comment.answer[0].content }}</pre></div>
+            <div class="answer_contents">{{ comment.answer[0].content }}</div>
           </div>
         </div>
       </div>
@@ -149,6 +151,11 @@
 </script>
 
 <style scoped>
+  .below-question p {
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+    color: #7f828b;
+  }
   .answered {
     font-size: 0.8rem;
     margin-left: 10px;
@@ -172,6 +179,9 @@
     color: darkgray;
     float: right;
   }
+  .comment_contents {
+    margin-top: 3px;
+  }
   .answerBox {
     background-color: #f5f5f5;
     margin-top: 0.7rem;
@@ -186,8 +196,20 @@
   .answer_contents {
     padding-top: 0.2rem;
     padding-left: 1.3rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
   .nonActive {
     display: none;
+  }
+  @media(min-width: 768px) {
+    .el-textarea {
+      width: 100%;
+    }
+  }
+  @media(max-width: 768px) {
+    .el-textarea {
+      width: 85%;
+    }
   }
 </style>
