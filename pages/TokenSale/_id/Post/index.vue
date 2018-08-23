@@ -1,6 +1,5 @@
 <template>
     <div>
-      <h1>Index</h1>
       <el-collapse v-model="activeNames">
         <el-collapse-item :title="'공지사항 작성'+'('+$route.params.id+')'" name="1">
           <div class="post_form">
@@ -24,7 +23,7 @@
         <div v-for="(post, index) in posts" :key="index">
           <div class="post">
             <div class="title">
-              <span style="cursor: pointer;">{{ post.title }}</span>
+              <span style="cursor: pointer;" @click="seeDetail(post._id)">{{ post.title }}</span>
             </div>
 
             <span>By </span>
@@ -81,6 +80,9 @@
           await this.refreshPosts()
         }
       },
+      seeDetail (id) {
+        this.$router.push('/TokenSale/'+this.token+'/'+'Post/'+id)
+      }
     },
     filters: {
       moment(date) {

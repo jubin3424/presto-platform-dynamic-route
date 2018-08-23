@@ -26,6 +26,13 @@ router.get('/posts/:token', (req, res) => {
     }).sort({_id: -1})
 })
 
+router.get('/posts/get/:id', (req, res) => {
+  Post.findById(req.params.id, 'user token title content created_at comments', (error, post) => {
+    if (error) { console.error(error); }
+    res.send({post: post})
+  })
+})
+
 router.post('/posts/new', (req, res) => {
   let user = req.body.user
   let token = req.body.token
