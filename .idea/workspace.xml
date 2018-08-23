@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/TokenSale/_id/Question.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/_id/Question.vue" afterDir="false" />
-    </list>
+    <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -316,11 +312,11 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1459" />
-    <option name="y" value="-3" />
-    <option name="width" value="1855" />
-    <option name="height" value="737" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="23" />
+    <option name="width" value="1384" />
+    <option name="height" value="819" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -450,12 +446,12 @@
       <workItem from="1533865260137" duration="21480000" />
       <workItem from="1534123479977" duration="25142000" />
       <workItem from="1534321380890" duration="50073000" />
-      <workItem from="1534821681680" duration="30470000" />
+      <workItem from="1534821681680" duration="31110000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127165000" />
+    <option name="totallyTimeSpent" value="127805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,19 +463,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1459" y="-3" width="1855" height="737" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49187934" visible="true" weight="0.14394766" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4921191" visible="true" weight="0.18604651" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50817883" side_tool="true" visible="true" weight="0.3265625" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5081043" side_tool="true" visible="true" weight="0.26794872" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49890947" weight="0.32867134" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="npm" order="2" sideWeight="0.50812066" side_tool="true" visible="true" weight="0.14394766" />
+      <window_info id="npm" order="2" sideWeight="0.5078809" side_tool="true" visible="true" weight="0.18604651" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4923664" weight="0.2640625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49182117" visible="true" weight="0.3265625" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4918957" visible="true" weight="0.26794872" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945474" weight="0.3997669" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
