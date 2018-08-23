@@ -1,42 +1,43 @@
 <template>
     <div>
-      <h1 style="display: inline-block;">{{ $route.params.id }} Notice</h1>&nbsp;&nbsp;&nbsp;
-      <el-collapse v-model="activeNames">
-        <el-collapse-item :title="'공지사항 작성'+'('+$route.params.id+')'" name="1">
-          <div class="post_form">
-            <el-form>
-              <el-form-item label="User" style="margin-bottom: 0.3rem;"><br>
-                <el-input v-model="user" class="title-input" placeholder="아이디를 입력해주세요."></el-input>
-              </el-form-item>
-              <el-form-item label="Title" style="margin-bottom: 0.3rem;"><br>
-                <el-input v-model="title" class="title-input" placeholder="제목을 입력해주세요."></el-input>
-              </el-form-item>
-              <el-form-item label="Content">
-                <el-input type="textarea" :rows="6" v-model="postContent" placeholder="내용을 입력해주세요."></el-input>
-              </el-form-item>
-              <el-button @click="addNotice">Register</el-button>
-            </el-form>
-          </div>
-        </el-collapse-item>
-      </el-collapse>
+      <h1 style="display: inline-block;">{{ $route.params.id }} Notice</h1>
+      <nuxt/>
+      <!--<el-collapse v-model="activeNames">-->
+        <!--<el-collapse-item :title="'공지사항 작성'+'('+$route.params.id+')'" name="1">-->
+          <!--<div class="post_form">-->
+            <!--<el-form>-->
+              <!--<el-form-item label="User" style="margin-bottom: 0.3rem;"><br>-->
+                <!--<el-input v-model="user" class="title-input" placeholder="아이디를 입력해주세요."></el-input>-->
+              <!--</el-form-item>-->
+              <!--<el-form-item label="Title" style="margin-bottom: 0.3rem;"><br>-->
+                <!--<el-input v-model="title" class="title-input" placeholder="제목을 입력해주세요."></el-input>-->
+              <!--</el-form-item>-->
+              <!--<el-form-item label="Content">-->
+                <!--<el-input type="textarea" :rows="6" v-model="postContent" placeholder="내용을 입력해주세요."></el-input>-->
+              <!--</el-form-item>-->
+              <!--<el-button @click="addNotice">Register</el-button>-->
+            <!--</el-form>-->
+          <!--</div>-->
+        <!--</el-collapse-item>-->
+      <!--</el-collapse>-->
 
-      <div v-if="posts.length > 0">
-        <div v-for="(post, index) in posts" :key="index">
-          <div class="post">
-            <div class="title" style="cursor: pointer;">
-              {{ post.title }}
-            </div>
+      <!--<div v-if="posts.length > 0">-->
+        <!--<div v-for="(post, index) in posts" :key="index">-->
+          <!--<div class="post">-->
+            <!--<div class="title">-->
+              <!--<span style="cursor: pointer;">{{ post.title }}</span>-->
+            <!--</div>-->
 
-            <span>By </span>
-            <span class="written_by">{{ post.user }}</span>
-            <span class="post_date">{{ post.created_at | moment2 }}</span>
-            <hr style="border-color: ghostwhite; color: ghostwhite; opacity: 0.3; margin-top: 1.2rem;">
-          </div>
-        </div>
-      </div>
-      <div v-else>
-        <h1>등록된 공지사항이 없습니다.</h1>
-      </div>
+            <!--<span>By </span>-->
+            <!--<span class="written_by">{{ post.user }}</span>-->
+            <!--<span class="post_date">{{ post.created_at | moment2 }}</span>-->
+            <!--<hr style="border-color: ghostwhite; color: ghostwhite; opacity: 0.3; margin-top: 1.2rem;">-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div v-else>-->
+        <!--<h1>등록된 공지사항이 없습니다.</h1>-->
+      <!--</div>-->
     </div>
 </template>
 

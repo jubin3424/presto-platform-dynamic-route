@@ -82,7 +82,7 @@
         return ((tp/ta)*100).toFixed(2)
       },
       async goToPage(name) {
-        await this.$router.push('/TokenSale/'+name)
+        await this.$router.push('/TokenSale/'+name+'/Question')
       }
     },
     filters: {
