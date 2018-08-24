@@ -12,6 +12,19 @@
       <div style="text-align: right;">
         <el-button type="success" @click="$router.go(-1)">목록보기</el-button>
       </div>
+      <div class="comment">
+        <div style="border-bottom: 1px solid silver; padding-bottom: 3px;">
+          댓글 <span style="color: mediumpurple">1</span>
+        </div>
+        <div class="comment-form">
+          <el-form>
+            <el-input type="textarea" :rows="5" placeholder="댓글을 남겨주세요"></el-input>
+            <div style="position: absolute; bottom: 1rem; right: 1rem;">
+              <el-button style="border-radius: 20px;">확인</el-button>
+            </div>
+          </el-form>
+        </div>
+      </div>
     </div>
 </template>
 
@@ -22,7 +35,8 @@
     data () {
       return {
         id: this.$route.params.post,
-        detail: ''
+        detail: '',
+        textarea: ''
       }
     },
     created () {
@@ -56,5 +70,12 @@
     padding-top: 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid silver;
+  }
+  .comment-form {
+    margin-top: 1rem;
+    position: relative;
   }
 </style>
