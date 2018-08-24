@@ -44,11 +44,7 @@ router.post('/posts/new', (req, res) => {
     token: token,
     title: title,
     content: content,
-    created_at: created_at,
-    comments: [{
-      text: '',
-      commented_by: ''
-    }]
+    created_at: created_at
   })
   new_post.save((error) => {
     if (error) {
@@ -60,5 +56,35 @@ router.post('/posts/new', (req, res) => {
     })
   })
 })
+
+// 아래는 한 개의 코멘트만 받을 때 쓸 수 있겠다.
+// router.put('/posts/comment/:id', (req, res) => {
+//   Post.findById(req.params.id, 'comments', (error, post) => {
+//     if (error) { console.log(error)}
+//     console.log(post)
+//     post.comments[0].text = req.body.text
+//     post.comments[0].commented_by = req.body.commented_by
+//     post.comments[0].written_at = new Date()
+//     post.save((error) => {
+//       if (error) { console.log(error)}
+//       res.send({
+//         success: true,
+//         message: 'Comment registered'
+//       })
+//     })
+//   })
+// })
+
+router.post('/posts/comments/:id', (req, res) => {
+  Post.findByIdAndUpdate(req.params.id, {$push: {
+    comments: {text: req.body.text, commented_by: req.body.commented_by,
+    written_at: new Date()}}}, (error, post) => {
+    if (error) { console.log(error)}
+    res.send({
+      success: true,
+      message: 'Comment registered'
+    })
+    })
+  })
 
 module.exports = router

@@ -8,7 +8,8 @@ let PostSchema = new Schema({
   content: String,
   comments: [{
     text: String,
-    commented_by: String
+    commented_by: String,
+    written_at: Date
   }],
   created_at: Date
 })

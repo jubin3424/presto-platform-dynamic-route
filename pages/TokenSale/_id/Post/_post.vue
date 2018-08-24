@@ -18,12 +18,28 @@
         </div>
         <div class="comment-form">
           <el-form>
-            <el-input type="textarea" :rows="5" placeholder="댓글을 남겨주세요"></el-input>
+            <el-input type="textarea" v-model="textarea" :rows="5" placeholder="댓글을 남겨주세요"></el-input>
             <div style="position: absolute; bottom: 1rem; right: 1rem;">
-              <el-button style="border-radius: 20px;">확인</el-button>
+              <el-button @click="addComments" style="border-radius: 20px;">확인</el-button>
             </div>
           </el-form>
         </div>
+
+        <div v-if="comments.length > 0">
+          <div v-for="(comment, index) in comments" :key=index>
+            <span class="comment_writer" style="font-weight: bolder;">{{ comment.user }}</span>
+            <span class="comment_date">
+            {{ comment.created_at }}<br>
+          </span>
+            <div class="comment_contents">{{ comment.content }}</div>
+            </div>
+          </div>
+        <div v-else>
+          <h4 style="color: palevioletred; margin-bottom: 0;">*Caution*</h4>
+          <h2 style="margin-top: 0;">There is no Comment</h2>
+          {{ this.detail.comments }}
+        </div>
+
       </div>
     </div>
 </template>
@@ -36,7 +52,8 @@
       return {
         id: this.$route.params.post,
         detail: '',
-        textarea: ''
+        textarea: '',
+        comments: ''
       }
     },
     created () {
@@ -46,9 +63,36 @@
       moment() {
         return moment()
       },
+      async refreshDetail(){
+        await this.getDetail()
+      },
       async getDetail() {
         const getTokens = await this.$axios.$get('/api/posts/get/' + this.id)
         this.detail = getTokens.post
+      },
+      async addComment() {
+        await this.$axios.$put('/api/posts/comment/' + this.id,
+          {text: this.textarea, commented_by: '꼬맹이'})
+          .then((response) => {
+            alert(response.message)
+            this.textarea = ''
+          })
+          .catch((response) => {
+            alert('오류가 발생했습니다')
+          })
+        await this.refreshDetail()
+      },
+      async addComments() {
+        await this.$axios.$post('/api/posts/comments/' + this.id,
+          {text: this.textarea, commented_by: '꼬맹이'})
+          .then((response) => {
+            alert(response.message)
+            this.textarea = ''
+          })
+          .catch((response) => {
+            alert('오류가 발생했습니다')
+          })
+        await this.refreshDetail()
       }
     },
     filters: {
@@ -77,5 +121,18 @@
   .comment-form {
     margin-top: 1rem;
     position: relative;
+  }
+  .comment {
+    padding-top: 0.8rem;
+    margin-top: 1.1rem;
+    /*border-top: 1px solid #dbe1ec;*/
+  }
+  .comment_date {
+    font-size: 0.8rem;
+    color: darkgray;
+    float: right;
+  }
+  .comment_contents {
+    margin-top: 3px;
   }
 </style>
