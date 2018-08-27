@@ -12,9 +12,9 @@
       <div style="text-align: right;">
         <el-button type="success" @click="$router.go(-1)">목록보기</el-button>
       </div>
-      <div class="comment">
+      <div class="comment_part">
         <div style="border-bottom: 1px solid silver; padding-bottom: 3px;">
-          댓글 <span style="color: mediumpurple">1</span>
+          댓글 <span style="color: mediumpurple">{{ this.detail.comments && this.detail.comments.length }}</span>
         </div>
         <div class="comment-form">
           <el-form>
@@ -25,13 +25,13 @@
           </el-form>
         </div>
 
-        <div v-if="comments.length > 0">
-          <div v-for="(comment, index) in comments" :key=index>
-            <span class="comment_writer" style="font-weight: bolder;">{{ comment.user }}</span>
+        <div v-if="this.detail.comments && this.detail.comments.length > 0">
+          <div v-for="(comment, index) in this.detail.comments" :key=index class="comment">
+            <span class="comment_writer" style="font-weight: bolder;">{{ comment.commented_by }}</span>
             <span class="comment_date">
-            {{ comment.created_at }}<br>
+            {{ comment.written_at | moment }}<br>
           </span>
-            <div class="comment_contents">{{ comment.content }}</div>
+            <div class="comment_contents">{{ comment.text }}</div>
             </div>
           </div>
         <div v-else>
@@ -125,7 +125,7 @@
   .comment {
     padding-top: 0.8rem;
     margin-top: 1.1rem;
-    /*border-top: 1px solid #dbe1ec;*/
+    border-top: 1px solid #dbe1ec;
   }
   .comment_date {
     font-size: 0.8rem;
