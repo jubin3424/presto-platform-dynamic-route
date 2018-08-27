@@ -14,6 +14,7 @@
       </div>
       <div style="text-align: right;">
         <el-button type="success" @click="$router.go(-1)">목록보기</el-button>
+        <nuxt-link to="edit">Edit</nuxt-link>
       </div>
       <div class="comment_part">
         <div style="border-bottom: 1px solid silver; padding-bottom: 3px;">
