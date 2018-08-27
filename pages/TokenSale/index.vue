@@ -145,6 +145,13 @@
   @media(max-width: 768px) {
     .container {
       width: 100%;
+      margin-top: 0.5rem;
+    }
+    .top {
+      font-size: 1.3rem;
+    }
+    .el-card {
+      margin-bottom: 1.3rem;
     }
   }
 </style>
