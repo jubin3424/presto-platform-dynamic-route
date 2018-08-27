@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="container">
-        <el-row :gutter="20">
+        <el-row :gutter="30">
           <el-col :xs="24" :sm="12" :md="8" v-for="(token, index) in tokens" :key="index">
             <el-card :body-style="{ padding: '0rem' }">
               <el-row :gutter="10">
@@ -10,6 +10,7 @@
                 </el-col>
                 <el-col :span="24">
                   <span style="float: right; margin-right: 5px; font-size: 0.6rem; color: crimson">{{ token.type }}</span>
+                  <span style="float: right; margin-right: 5px; font-size: 0.6rem; color: cornflowerblue">ING</span>
                   <div style="padding-top: 10px; padding-left: 0.8rem;">
                     <div class="main-token-title">{{ token.name }}</div>
                     <div class="sub-token-title">World Most Best Token Ever</div>
@@ -95,7 +96,7 @@
 
 <style scoped>
   .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
   }
   a {
@@ -123,6 +124,9 @@
   }
   .el-card:hover {
     -webkit-box-shadow: 0 2px 12px 0 silver;
+  }
+  .el-card {
+    margin-bottom: 4rem;
   }
   @media(max-width: 768px) {
     .container {

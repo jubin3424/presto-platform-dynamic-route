@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/TokenSale/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/_id.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/TokenSale/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,8 +30,8 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+                <state relative-caret-position="57">
+                  <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
@@ -45,11 +43,12 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+                <state relative-caret-position="147">
+                  <caret line="12" column="116" selection-start-line="12" selection-start-column="116" selection-end-line="12" selection-end-column="116" />
                   <folding>
                     <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#1;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -265,9 +264,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1879" />
-    <option name="y" value="41" />
-    <option name="width" value="1369" />
+    <option name="x" value="1655" />
+    <option name="y" value="37" />
+    <option name="width" value="1634" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -385,12 +384,12 @@
       <workItem from="1534123479977" duration="25142000" />
       <workItem from="1534321380890" duration="50073000" />
       <workItem from="1534821681680" duration="31915000" />
-      <workItem from="1535078366594" duration="15986000" />
+      <workItem from="1535078366594" duration="16462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144596000" />
+    <option name="totallyTimeSpent" value="145072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,19 +401,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1879" y="41" width="1369" height="877" extended-state="0" />
+    <frame x="1655" y="37" width="1634" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49036777" visible="true" weight="0.1624629" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49036777" visible="true" weight="0.13577186" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51261127" side_tool="true" visible="true" weight="0.26794872" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51270926" side_tool="true" visible="true" weight="0.26794872" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4984" weight="0.32820514" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48813057" weight="0.2628205" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="npm" order="2" sideWeight="0.50963223" side_tool="true" visible="true" weight="0.1624629" />
+      <window_info id="npm" order="2" sideWeight="0.50963223" side_tool="true" visible="true" weight="0.13577186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48738873" visible="true" weight="0.26794872" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.48729077" visible="true" weight="0.26794872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945474" weight="0.3997669" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -709,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -789,13 +781,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="147">
+          <caret line="12" column="116" selection-start-line="12" selection-start-column="116" selection-end-line="12" selection-end-column="116" />
           <folding>
             <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
