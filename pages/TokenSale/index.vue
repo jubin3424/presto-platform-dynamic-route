@@ -6,7 +6,7 @@
             <el-card :body-style="{ padding: '0rem' }">
               <el-row :gutter="10">
                 <el-col :span="24">
-                  <img :src="getImageUrl(token.imageUrl)" class="image" style="height: 250px">
+                  <img :src="getImageUrl(token.imageUrl)" class="image" style="width: 100%; height: 250px">
                 </el-col>
                 <el-col :span="24">
                   <span style="float: right; margin-right: 5px; font-size: 0.6rem; color: crimson">{{ token.type }}</span>

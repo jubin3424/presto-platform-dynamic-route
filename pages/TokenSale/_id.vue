@@ -4,7 +4,7 @@
         <div class="coinName" @click="getTokenInfo">{{ this.tokenInfo.name }}</div>
         <el-row :gutter="20">
           <el-col :xs="24" :sm="12" style="overflow: hidden;">
-            <img :src="getImageUrl(this.tokenInfo.imageUrl)" style="margin-top: 1rem; height: 390px;">
+            <img :src="getImageUrl(this.tokenInfo.imageUrl)" class="coin-image" style="margin-top: 1rem;">
           </el-col>
           <el-col :xs="24" :sm="12">
             <div class="token-market">
@@ -84,9 +84,12 @@
   }
   .token-market {
     background-color: whitesmoke;
-    padding: 0.1rem 0.1rem 0rem 0.1rem;
+    padding: 0.1rem 0.1rem 0 0.1rem;
     margin-top: 1rem;
     height:390px;
+  }
+  .coin-image {
+    height: 390px;
   }
   @media(max-width: 768px) {
     .container {
@@ -95,6 +98,11 @@
     .token-market {
       background-color: ghostwhite;
       margin-top: 0.4rem;
+    }
+    .coin-image {
+      width: 100%;
+      height: 180px;
+      margin-right: 0.1rem;
     }
   }
 </style>

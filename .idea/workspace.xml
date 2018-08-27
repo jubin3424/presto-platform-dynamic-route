@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/TokenSale/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/TokenSale/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +32,8 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="174">
-                  <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+                <state relative-caret-position="405">
+                  <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -40,11 +42,53 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+                  <folding>
+                    <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#el-progress#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#span#1;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="Detail.vue" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Detail.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="15">
                   <caret line="1" selection-start-line="1" selection-end-line="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/index.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="120">
+                  <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_id.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="86">
+                  <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+                  <folding>
+                    <element signature="n#style#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#el-button#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#el-button#1;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -67,34 +111,13 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/index.vue">
+          <file leaf-file-name="default.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/layouts/default.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="339">
-                  <caret line="113" column="38" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
                   <folding>
-                    <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#1;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#3;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#el-form#0;n#div#1;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#el-button#0;n#div#0;n#el-form#0;n#div#1;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
-                  <folding>
-                    <element signature="n#style#0;n#el-form-item#0;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#h1#0;n#nuxt-link#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -160,6 +183,7 @@
       <find>class=&quot;comment&quot;</find>
       <find>background-color</find>
       <find>delete</find>
+      <find>image</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pages/TokenSale/_id/Post/_post</dir>
@@ -204,10 +228,8 @@
         <option value="$PROJECT_DIR$/pages/Search/index.vue" />
         <option value="$PROJECT_DIR$/pages/Search.vue" />
         <option value="$PROJECT_DIR$/api/index.js" />
-        <option value="$PROJECT_DIR$/pages/TokenSale/_id.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Detail.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/index.vue" />
-        <option value="$PROJECT_DIR$/pages/TokenSale/index.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Question/index.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Post/PostDetail.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue" />
@@ -221,6 +243,8 @@
         <option value="$PROJECT_DIR$/api/routes/post.js" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/edit.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_id/Post/_post/index.vue" />
+        <option value="$PROJECT_DIR$/pages/TokenSale/_id.vue" />
+        <option value="$PROJECT_DIR$/pages/TokenSale/index.vue" />
       </list>
     </option>
   </component>
@@ -263,11 +287,6 @@
             <path>
               <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
               <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name=".nuxt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -303,23 +322,6 @@
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="TokenSale" type="462c0819:PsiDirectoryNode" />
               <item name="_id" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="TokenSale" type="462c0819:PsiDirectoryNode" />
-              <item name="_id" type="462c0819:PsiDirectoryNode" />
-              <item name="Post" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="TokenSale" type="462c0819:PsiDirectoryNode" />
-              <item name="_id" type="462c0819:PsiDirectoryNode" />
-              <item name="Post" type="462c0819:PsiDirectoryNode" />
-              <item name="_post" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -383,12 +385,12 @@
       <workItem from="1534123479977" duration="25142000" />
       <workItem from="1534321380890" duration="50073000" />
       <workItem from="1534821681680" duration="31915000" />
-      <workItem from="1535078366594" duration="15020000" />
+      <workItem from="1535078366594" duration="15986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143630000" />
+    <option name="totallyTimeSpent" value="144596000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,7 +405,7 @@
     <frame x="1879" y="41" width="1369" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49036777" visible="true" weight="0.1624629" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49036777" visible="true" weight="0.1624629" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51261127" side_tool="true" visible="true" weight="0.26794872" />
@@ -412,7 +414,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" sideWeight="0.50963223" side_tool="true" visible="true" weight="0.1624629" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.48738873" visible="true" weight="0.26794872" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48738873" visible="true" weight="0.26794872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945474" weight="0.3997669" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -544,16 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layouts/default.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#nuxt-link#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -620,19 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-button#1;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -644,21 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-progress#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,13 +674,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -724,25 +681,6 @@
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#el-form-item#0;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Detail.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -773,15 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/_post.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="405">
+          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -798,6 +729,78 @@
             <element signature="n#style#0;n#div#0;n#el-form#0;n#div#1;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-button#0;n#div#0;n#el-form#0;n#div#1;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#2;n#div#4;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/_post.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#el-form-item#0;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layouts/default.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#nuxt-link#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+          <folding>
+            <element signature="n#style#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#0;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-button#1;n#div#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-col#1;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#el-progress#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
