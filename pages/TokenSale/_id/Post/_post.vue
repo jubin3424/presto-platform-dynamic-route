@@ -6,6 +6,9 @@
       <div class="post_user">
         by <span style="color: slateblue; font-weight: bolder;">{{ this.detail.user }}</span>
         <span style="color: silver; margin-left: 0.5rem;">{{ this.detail.created_at | moment }}</span>
+        <div style="text-align: right">
+          <el-button type="text" @click="deletePost(id, detail.token)">삭제</el-button>
+        </div>
       </div>
       <div class="post_content">{{ this.detail.content }}
       </div>
@@ -37,7 +40,6 @@
         <div v-else>
           <h4 style="color: palevioletred; margin-bottom: 0;">*Caution*</h4>
           <h2 style="margin-top: 0;">There is no Comment</h2>
-          {{ this.detail.comments }}
         </div>
 
       </div>
@@ -93,6 +95,16 @@
             alert('오류가 발생했습니다')
           })
         await this.refreshDetail()
+      },
+      async deletePost(id, token) {
+        await this.$axios.$delete('/api/posts/delete/' + id, {id: id})
+          .then((response) => {
+            alert(response.message)
+          })
+          .catch((response) => {
+            alert(response)
+          })
+        this.$router.push('/TokenSale/'+token+'/Post')
       }
     },
     filters: {

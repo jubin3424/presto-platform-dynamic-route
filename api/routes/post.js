@@ -57,7 +57,7 @@ router.post('/posts/new', (req, res) => {
   })
 })
 
-// 아래는 한 개의 코멘트만 받을 때 쓸 수 있겠다.
+// 아래는 한 개의 코멘트만 받을 때 쓸 수 있겠다. (문의사항 코멘트는 이 코드로 되어있음)
 // router.put('/posts/comment/:id', (req, res) => {
 //   Post.findById(req.params.id, 'comments', (error, post) => {
 //     if (error) { console.log(error)}
@@ -86,5 +86,35 @@ router.post('/posts/comments/:id', (req, res) => {
     })
     })
   })
+
+router.put('/posts/edit/:id', (req, res) => {
+  Post.findById(req.params.id, 'title content created_at', (error, post) => {
+    if (error) { console.log(error) }
+    post.title = req.body.title
+    post.content = req.body.content
+    post.created_at = new Date()
+
+    post.save((error) => {
+      if (error) { console.log(error) }
+      res.send({
+        success: true,
+        message: 'Post Edited Successfully'
+      })
+    })
+  })
+})
+
+router.delete('/posts/delete/:id', (req, res) => {
+  Post.remove({
+    _id: req.params.id
+  }, (error) => {
+    if (error)
+      res.send(error)
+    res.send({
+      success: true,
+      message: 'Post deleted Successfully'
+    })
+  })
+})
 
 module.exports = router
