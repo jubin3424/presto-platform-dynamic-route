@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/plugins/carousel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/TokenSale/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TokenSale/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,8 +35,26 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="nuxt.config.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="407">
+                  <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AppLogo.vue" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/components/AppLogo.vue">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="151">
+                  <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="17" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -44,8 +66,8 @@
           <file leaf-file-name="index.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="401">
-                  <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+                <state relative-caret-position="260">
+                  <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -96,7 +118,7 @@
             <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+                  <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
                   <folding>
                     <element signature="n#style#0;n#el-form-item#0;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -144,8 +166,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -179,16 +201,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/TokenSale/_coin.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/_category.vue" />
         <option value="$PROJECT_DIR$/plugins/axios.js" />
         <option value="$PROJECT_DIR$/plugins/element-ui.js" />
-        <option value="$PROJECT_DIR$/nuxt.config.js" />
         <option value="$PROJECT_DIR$/api/routes/coins.json" />
         <option value="$PROJECT_DIR$/api/routes/coins.js" />
         <option value="$PROJECT_DIR$/models/coin.js" />
         <option value="$PROJECT_DIR$/api/routes/coin.js" />
-        <option value="$PROJECT_DIR$/pages/index.vue" />
         <option value="$PROJECT_DIR$/models/answer.js" />
         <option value="$PROJECT_DIR$/models/comment.js" />
         <option value="$PROJECT_DIR$/pages/TokenSale/Complete.vue" />
@@ -229,6 +248,10 @@
         <option value="$PROJECT_DIR$/pages/TokenSale/_id.vue" />
         <option value="$PROJECT_DIR$/layouts/default.vue" />
         <option value="$PROJECT_DIR$/pages/TokenSale/index.vue" />
+        <option value="$PROJECT_DIR$/components/AppLogo.vue" />
+        <option value="$PROJECT_DIR$/plugins/carousel.js" />
+        <option value="$PROJECT_DIR$/nuxt.config.js" />
+        <option value="$PROJECT_DIR$/pages/index.vue" />
       </list>
     </option>
   </component>
@@ -249,8 +272,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1573" />
-    <option name="y" value="16" />
+    <option name="x" value="1659" />
+    <option name="y" value="41" />
     <option name="width" value="1634" />
     <option name="height" value="877" />
   </component>
@@ -282,12 +305,12 @@
             <path>
               <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
               <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
               <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
@@ -299,6 +322,11 @@
               <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="TokenSale" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="presto-platform-dynamic" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="presto-platform-dynamic" type="b2602c69:ProjectViewProjectNode" />
@@ -367,12 +395,12 @@
       <workItem from="1534123479977" duration="25142000" />
       <workItem from="1534321380890" duration="50073000" />
       <workItem from="1534821681680" duration="31915000" />
-      <workItem from="1535078366594" duration="22380000" />
+      <workItem from="1535078366594" duration="28158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150990000" />
+    <option name="totallyTimeSpent" value="156768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,19 +412,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1573" y="16" width="1634" height="877" extended-state="0" />
+    <frame x="1659" y="41" width="1634" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49036777" visible="true" weight="0.13577186" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4904348" visible="true" weight="0.13577186" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5145691" side_tool="true" visible="true" weight="0.26794872" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5133292" side_tool="true" visible="true" weight="0.2628205" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4984" weight="0.32820514" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48729077" weight="0.2628205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4866708" visible="true" weight="0.2628205" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info id="npm" order="2" sideWeight="0.50963223" side_tool="true" visible="true" weight="0.13577186" />
+      <window_info id="npm" order="2" sideWeight="0.50956523" side_tool="true" visible="true" weight="0.13577186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.48543087" visible="true" weight="0.26794872" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48481092" weight="0.26794872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945474" weight="0.3997669" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -425,33 +453,8 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/comment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/axios.js" />
     <entry file="file://$PROJECT_DIR$/api/routes/coins.js" />
-    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/coin_list.json" />
-    <entry file="file://$PROJECT_DIR$/plugins/element-ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/answer.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -680,7 +683,7 @@
     <entry file="file://$PROJECT_DIR$/pages/TokenSale/_id/Post/index.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="27" lean-forward="true" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="n#style#0;n#el-form-item#0;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#el-form-item#1;n#el-form#0;n#div#0;n#el-collapse-item#0;n#el-collapse#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -693,13 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -772,10 +768,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/AppLogo.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/element-ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="41" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nuxt.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/TokenSale/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="153" column="24" selection-start-line="153" selection-start-column="24" selection-end-line="153" selection-end-column="24" />
+        <state relative-caret-position="260">
+          <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#el-col#0;n#el-row#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -787,6 +814,13 @@
             <element signature="n#style#0;n#el-progress#0;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#div#0;n#el-card#0;n#el-col#0;n#el-row#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
         </state>
       </provider>
     </entry>

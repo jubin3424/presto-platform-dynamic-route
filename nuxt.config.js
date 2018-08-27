@@ -16,7 +16,8 @@ module.exports = {
     ]
   },
   plugins: [
-    {src: '~/plugins/element-ui.js', ssr: true}
+    {src: '~/plugins/element-ui.js', ssr: true},
+    {src: '~/plugins/carousel.js', ssr: true}
   ],
   /*
   ** Customize the progress bar color
@@ -43,7 +44,7 @@ module.exports = {
   },
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
   ],
   axios: {
     proxy: true

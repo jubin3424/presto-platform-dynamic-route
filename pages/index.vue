@@ -1,7 +1,26 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
+      <div class="carousel-container">
+        <no-ssr>
+        <carousel :perPage="1">
+          <slide v-for="(item, index) in tableData" :key="index">
+            <img :src="item.main"><div class="centered">PRST Token Newly Released!</div>
+          </slide>
+        </carousel>
+        </no-ssr>
+      </div>
+
+      <!--<div class="newly-arrived">-->
+        <!--&lt;!&ndash;<h1 class="main_title">New Arrival</h1>&ndash;&gt;-->
+        <!--<el-carousel :interval="10000" type="card" style="height: 500px;">-->
+          <!--<el-carousel-item v-for="(item, index) in tableData" :key="index" style="height: 500px;">-->
+            <!--<h3 style="text-align: center;">-->
+              <!--<img :src="item.main" style="background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 45% 58%"></h3>-->
+          <!--</el-carousel-item>-->
+        <!--</el-carousel>-->
+      <!--</div>-->
+
       <h1 class="title">
         presto-platform-dynamic
       </h1>
@@ -13,29 +32,52 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
+  import { Carousel, Slide } from 'vue-carousel'
 export default {
+  data () {
+    return {
+      selected: 0,
+      tableData: [{
+        name: 'aelf',
+        main: require('../static/img/coin/office_back.jpg')
+      }, {
+        name: 'root',
+        main: require('../static/img/coin/back2.jpg')
+      }]
+    }
+  },
   components: {
-    AppLogo
+    Carousel,
+    Slide
   }
 }
 </script>
 
 <style scoped>
 .container {
-  min-height: 80vh;
-  display: flex;
+  /*margin-top: 2vh;*/
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  color: #35495e;
-  letter-spacing: 1px;
+.carousel-container {
+  position: relative;
+  text-align: center;
+  color: white
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+}
+.VueCarousel-slide{
+  height: 90vh;
+}
+.VueCarousel-slide img {
+  width: 100%;
+  height: 100%;
 }
 
 .subtitle {
@@ -46,8 +88,17 @@ export default {
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
+@media(max-width: 768px) {
+  .VueCarousel-slide{
+    height: 60vh;
+  }
+  .VueCarousel-slide img {
+    width: 100%;
+    height: 100%;
+  }
+  .centered {
+    font-size: 3rem;
+  }
 }
 </style>
 
