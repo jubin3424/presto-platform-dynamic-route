@@ -103,6 +103,19 @@ router.post('/posts/comments/:id', (req, res) => {
     })
   })
 
+// 삭제는 원래 post지만, nested object를 삭제하기 위해 부모 id가 필요... post로 전달하고 pull로 빼냄
+router.post('/posts/comments/delete/:id', (req, res) => {
+  Post.findByIdAndUpdate(req.params.id, {$pull: {
+    comments: { _id: req.body.id }
+    }}, (error) => {
+    if (error) { console.log(error)}
+    res.send({
+      success: true,
+      message: '댓글이 삭제되었습니다.'
+    })
+  })
+})
+
 router.put('/posts/edit/:id', (req, res) => {
   Post.findById(req.params.id, 'title content created_at', (error, post) => {
     if (error) { console.log(error) }

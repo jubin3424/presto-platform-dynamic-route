@@ -30,12 +30,17 @@
       </div>
 
       <div v-if="this.detail.comments && this.detail.comments.length > 0">
+        <div style="margin-top: 0.6rem">&nbsp;</div>
         <div v-for="(comment, index) in this.detail.comments" :key=index class="comment">
           <span class="comment_writer" style="font-weight: bolder;">{{ comment.commented_by }}</span>
           <span class="comment_date">
             {{ comment.written_at | moment }}<br>
           </span>
           <div class="comment_contents">{{ comment.text }}</div>
+          <div style="text-align: right"><i @click="deleteComment(comment._id, id)" class="el-icon-delete"></i></div>
+
+          <!--아래는 v-if로 댓글을 쓴 사람이 아닐 경우 휴지통 아이콘이 안보이므로, 그만큼 위아래 간격을 준다-->
+          <!--<div style="height: 10px;"></div>-->
         </div>
       </div>
       <div v-else>
@@ -56,7 +61,8 @@
         id: this.$route.params.post,
         detail: '',
         textarea: '',
-        comments: ''
+        comments: '',
+        tokenName: ''
       }
     },
     created () {
@@ -72,6 +78,7 @@
       async getDetail() {
         const getTokens = await this.$axios.$get('/api/posts/get/' + this.id)
         this.detail = getTokens.post
+        this.tokenName = this.detail.token
       },
       async addComment() {
         await this.$axios.$put('/api/posts/comment/' + this.id,
@@ -106,6 +113,16 @@
             alert(response)
           })
         this.$router.push('/TokenSale/'+token+'/Post')
+      },
+      async deleteComment(id, postId) {
+        await this.$axios.$post('/api/posts/comments/delete/' + postId, {id: id})
+          .then((response) => {
+            alert(response.message)
+          })
+          .catch((response) => {
+            alert('삭제 실패')
+          })
+        this.refreshDetail()
       },
       editPost() {
         this.$router.push(this.id+'/edit')
@@ -143,7 +160,7 @@
   }
   .comment {
     padding-top: 0.8rem;
-    margin-top: 1.1rem;
+    margin-top: 0.5rem;
     border-top: 1px solid #dbe1ec;
   }
   .comment_date {
@@ -153,5 +170,7 @@
   }
   .comment_contents {
     margin-top: 3px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 </style>

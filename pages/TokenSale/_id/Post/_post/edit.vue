@@ -12,7 +12,8 @@
           <el-form-item label="Content">
             <el-input type="textarea" :rows="6" v-model="content"></el-input>
           </el-form-item>
-          <el-button @click="editNotice(id)">Register</el-button>
+          <el-button @click="editNotice(id)">수정</el-button>
+          <el-button @click="$router.go(-1)">취소</el-button>
         </el-form>
       </div>
     </div>
