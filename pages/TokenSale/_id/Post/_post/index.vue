@@ -147,7 +147,7 @@
     border-bottom: 1px solid silver;
   }
   .post_content {
-    padding-top: 1rem;
+    /*padding-top: 1rem;*/
     white-space: pre-wrap;
     word-wrap: break-word;
     padding-bottom: 2rem;

@@ -1,5 +1,9 @@
 <template>
     <div>
+      <div class="top">
+        <div style="text-align: center;">
+          진행중인 TokenSale이 {{ this.tokens && this.tokens.length }}개 있습니다.</div>
+      </div>
       <div class="container">
         <el-row :gutter="30">
           <el-col :xs="24" :sm="12" :md="8" v-for="(token, index) in tokens" :key="index">
@@ -95,9 +99,19 @@
 </script>
 
 <style scoped>
+  .top {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    /*background-color: #605454;*/
+    background-image: url("../../static/img/back.png");
+    color: white;
+  }
   .container {
     width: 85%;
     margin: auto;
+    margin-top: 2rem;
   }
   a {
     text-decoration: none;

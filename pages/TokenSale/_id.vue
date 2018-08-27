@@ -71,12 +71,11 @@
   .container {
     width: 80%;
     margin: auto;
+    margin-top: 1.5rem;
   }
   .coinName {
     font-size: 2rem;
     font-style: italic;
-    text-decoration: underline;
-    text-decoration-style: wavy;
   }
   .btmPart {
     margin-top: 1rem;
