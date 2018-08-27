@@ -14,7 +14,7 @@
     <div class="post_content">{{ this.detail.content }}
     </div>
     <div style="text-align: right;">
-      <el-button type="success" @click="$router.go(-1)">목록보기</el-button>
+      <el-button type="success" @click="goToList(detail.token)">목록보기</el-button>
     </div>
     <div class="comment_part">
       <div style="border-bottom: 1px solid silver; padding-bottom: 3px;">
@@ -109,6 +109,9 @@
       },
       editPost() {
         this.$router.push(this.id+'/edit')
+      },
+      goToList(token) {
+        this.$router.push('/TokenSale/' + token + '/Post')
       }
     },
     filters: {
