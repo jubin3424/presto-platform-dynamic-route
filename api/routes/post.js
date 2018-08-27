@@ -57,6 +57,22 @@ router.post('/posts/new', (req, res) => {
   })
 })
 
+router.put('/posts/edit/:id', (req, res) => {
+  Post.findById(req.params.id, 'title content created_at', (error, post) => {
+    if (error) { console.log(error) }
+    post.title = req.body.title
+    post.content = req.body.content
+    post.created_at = new Date()
+    post.save((error) => {
+      if (error) { console.log(error) }
+      res.send({
+        success: true,
+        message: 'Edited Successfully'
+      })
+    })
+  })
+})
+
 // 아래는 한 개의 코멘트만 받을 때 쓸 수 있겠다. (문의사항 코멘트는 이 코드로 되어있음)
 // router.put('/posts/comment/:id', (req, res) => {
 //   Post.findById(req.params.id, 'comments', (error, post) => {
