@@ -92,7 +92,7 @@
       async addComment () {
         if (confirm('질문을 등록하시겠습니까?')) {
           await this.$axios.$post('/api/comments/new',
-            { user: '너와나의갭', content: this.content, token: this.$route.params.id})
+            { user: 'shockkyshook', content: this.content, token: this.$route.params.id})
             .then((response) => {
               console.log(response.message)
               this.content = ''

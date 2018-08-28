@@ -94,7 +94,7 @@
       },
       async addComments() {
         await this.$axios.$post('/api/posts/comments/' + this.id,
-          {text: this.textarea, commented_by: '꼬맹이'})
+          {text: this.textarea, commented_by: '서울개미'})
           .then((response) => {
             alert(response.message)
             this.textarea = ''

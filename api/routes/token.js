@@ -71,7 +71,7 @@ router.post('/tokens/new', upload.any(), (req, res) => {
     }
     res.send({
       success: true,
-      message: 'Token saved Successfully'
+      message: '토큰이 성공적으로 등록되었습니다.'
     })
   })
 })

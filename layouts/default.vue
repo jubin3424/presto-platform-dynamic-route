@@ -9,8 +9,8 @@
           <li><nuxt-link to="/">DAICO란?</nuxt-link></li>
           <li><nuxt-link to="/">DAICO SVC</nuxt-link></li>
           <li><nuxt-link :to="{name: 'TokenSale'}">TokenSale</nuxt-link></li>
-          <li><nuxt-link to="/">Airdrop</nuxt-link></li>
-          <li><nuxt-link to="/">Wallet</nuxt-link></li>
+          <li><nuxt-link :to="{name: 'TokenRegister'}">TokenRegister</nuxt-link></li>
+          <li><nuxt-link :to="{name: 'Search'}">Search</nuxt-link></li>
           <li><nuxt-link to="/">Kor</nuxt-link></li>
         </ul>
       </div>
@@ -33,10 +33,10 @@
               <nuxt-link :to="{name: 'TokenSale'}">TokenSale</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
-              <nuxt-link to="/">Airdrop</nuxt-link>
+              <nuxt-link :to="{name: 'TokenRegister'}">TokenRegister</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
-              <nuxt-link to="/">Wallet</nuxt-link>
+              <nuxt-link :to="{name: 'Search'}">Search</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
               <nuxt-link to="/">Kor</nuxt-link>

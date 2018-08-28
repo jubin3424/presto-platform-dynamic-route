@@ -63,9 +63,9 @@
           await this.$axios.$post('/api/tokens/new',
             {name: this.name, total_amount: this.total_amount, type: this.type})
             .then((response) => {
-              console.log(response.message)
               this.namelist.push(name)
               this.$refs.upload.submit()
+              alert(response.message)
               this.$router.push('/TokenSale')
             })
             .catch((response) => {
