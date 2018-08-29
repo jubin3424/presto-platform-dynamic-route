@@ -146,4 +146,21 @@ router.delete('/posts/delete/:id', (req, res) => {
   })
 })
 
+router.post('/posts/reply/:id', (req, res) => {
+  const query = 'comments.'+req.body.index+'.reply'
+  Post.findOneAndUpdate({
+    _id: req.params.id, "comments._id": req.body._id
+  }, { $push: {[query]: {"replied_by": req.body.replied_by,
+        "text": req.body.text, "replied_when": new Date()}}}, (error) => {
+    if (error) { console.log(error)}
+    res.send({
+      success: true,
+      message: 'Reply registered'
+    })
+  })
+})
+// db.posts.find({ "comments._id": ObjectId("5b850c2212b23f914c9e05bf")}) 댓글 찾
+// db.posts.update({ "comments._id": ObjectId("5b850c2212b23f914c9e05bf")}, {$push: {reply: { text: "Hiiii", replied_by: "Sooooo" }}})
+// 댓글 작성~!!
+
 module.exports = router

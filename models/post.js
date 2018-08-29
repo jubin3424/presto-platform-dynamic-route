@@ -9,7 +9,12 @@ let PostSchema = new Schema({
   comments: [{
     text: String,
     commented_by: String,
-    written_at: Date
+    written_at: Date,
+    reply: [{
+      text: String,
+      replied_by: String,
+      replied_when: Date
+    }]
   }],
   created_at: Date
 })

@@ -31,16 +31,45 @@
 
       <div v-if="this.detail.comments && this.detail.comments.length > 0">
         <div style="margin-top: 0.6rem">&nbsp;</div>
-        <div v-for="(comment, index) in this.detail.comments" :key=index class="comment">
+        <div v-for="(comment, index) in this.detail.comments" :key="index" class="comment">
           <span class="comment_writer" style="font-weight: bolder;">{{ comment.commented_by }}</span>
           <span class="comment_date">
             {{ comment.written_at | moment }}<br>
           </span>
           <div class="comment_contents">{{ comment.text }}</div>
+
+          <span style="border-radius: 10px; border: 1px solid black;
+                        font-size: 0.7rem; padding: 5px; margin-top: 1rem;
+                        margin-bottom: 1rem; cursor: pointer;" @click="showForm(index)">Reply</span>
+
           <div style="text-align: right"><i @click="deleteComment(comment._id, id)" class="el-icon-delete"></i></div>
 
           <!--아래는 v-if로 댓글을 쓴 사람이 아닐 경우 휴지통 아이콘이 안보이므로, 그만큼 위아래 간격을 준다-->
           <!--<div style="height: 10px;"></div>-->
+
+          <div v-bind:class="[{ activeReply: num === index }, { nonActive: num !== index }]">
+            <div class="answer-part">
+              <el-form>
+                <el-input
+                  type="textarea"
+                  :rows="2"
+                  :placeholder="comment.commented_by+'님에게 답변을 해주세요.'"
+                  v-model="reply" style="width: 80%;"></el-input>
+                <el-button @click="addReply(index, comment._id)" style="width: 19%; float: right; padding: 20px 13px 18px 13px;">등록</el-button>
+              </el-form>
+            </div>
+          </div>
+
+          <!-- Answer Area -->
+          <div v-for="(reply, index) in comment.reply" :key="index" class="comment_box">
+            ㄴ
+            <div class="reply">
+              <span class="comment_writer2">{{ reply.replied_by }}</span>
+              <span class="comment_date">{{ reply.replied_when | moment }}</span><br>
+              <div class="comment_contents2">{{ reply.text }}</div>
+            </div>
+          </div>
+
         </div>
       </div>
       <div v-else>
@@ -62,7 +91,11 @@
         detail: '',
         textarea: '',
         comments: '',
-        tokenName: ''
+        tokenName: '',
+        replies: '',
+        num: '',
+        reply: '',
+        nonActive: 'nonActive'
       }
     },
     created () {
@@ -78,6 +111,7 @@
       async getDetail() {
         const getTokens = await this.$axios.$get('/api/posts/get/' + this.id)
         this.detail = getTokens.post
+        // this.replies = this.detail
         this.tokenName = this.detail.token
       },
       async addComment() {
@@ -98,6 +132,19 @@
           .then((response) => {
             alert(response.message)
             this.textarea = ''
+          })
+          .catch((response) => {
+            alert('오류가 발생했습니다')
+          })
+        await this.refreshDetail()
+      },
+      // 코멘트에 코멘트 추가하는 부분
+      async addReply(index, id) {
+        await this.$axios.$post('/api/posts/reply/' + this.id,
+          {_id: id, index: index, replied_by: '고양이소년', text: this.reply})
+          .then((response) => {
+            alert(response.message)
+            this.reply = ''
           })
           .catch((response) => {
             alert('오류가 발생했습니다')
@@ -129,6 +176,9 @@
       },
       goToList(token) {
         this.$router.push('/TokenSale/' + token + '/Post')
+      },
+      showForm(index) {
+        this.num = index
       }
     },
     filters: {
@@ -172,5 +222,35 @@
     margin-top: 3px;
     white-space: pre-wrap;
     word-wrap: break-word;
+    margin-bottom: 1rem;
+  }
+  .comment_box {
+    background-color: #f5f5f5;
+    margin-top: 0.7rem;
+    padding: 1rem 1rem 1rem 0.7rem
+  }
+  .reply {
+    display: inline;
+  }
+  .comment_writer {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: mediumpurple;
+    margin-left: 2px;
+  }
+  .comment_writer2 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    color: cadetblue;
+    margin-left: 2px;
+  }
+  .comment_contents2 {
+    padding-top: 0.2rem;
+    padding-left: 1.3rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .nonActive {
+    display: none;
   }
 </style>

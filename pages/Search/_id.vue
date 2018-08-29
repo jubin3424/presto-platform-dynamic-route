@@ -53,7 +53,7 @@
         }
       },
       goTo (name) {
-        this.$router.push('/TokenSale/' + name)
+        this.$router.push('/TokenSale/' + name + '/Question')
       }
     },
     filters: {
