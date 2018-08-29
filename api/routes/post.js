@@ -146,6 +146,7 @@ router.delete('/posts/delete/:id', (req, res) => {
   })
 })
 
+// 공지사항 댓글 추가
 router.post('/posts/reply/:id', (req, res) => {
   const query = 'comments.'+req.body.index+'.reply'
   Post.findOneAndUpdate({
@@ -159,8 +160,20 @@ router.post('/posts/reply/:id', (req, res) => {
     })
   })
 })
-// db.posts.find({ "comments._id": ObjectId("5b850c2212b23f914c9e05bf")}) 댓글 찾
-// db.posts.update({ "comments._id": ObjectId("5b850c2212b23f914c9e05bf")}, {$push: {reply: { text: "Hiiii", replied_by: "Sooooo" }}})
-// 댓글 작성~!!
+
+// 공지사항 댓글 삭제
+router.post('/posts/reply/delete/:id', (req, res) => {
+  const query = 'comments.'+req.body.index+'.reply'
+  Post.findByIdAndUpdate(req.params.id,
+    {$pull: {
+      [query]: {  _id: req.body._id }
+    }}, (error) => {
+    if (error) { console.log(error)}
+    res.send({
+      success: true,
+      message: '댓글이 삭제되었습니다.'
+    })
+  })
+})
 
 module.exports = router

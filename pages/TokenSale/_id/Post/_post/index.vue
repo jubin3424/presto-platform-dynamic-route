@@ -61,12 +61,14 @@
           </div>
 
           <!-- Answer Area -->
-          <div v-for="(reply, index) in comment.reply" :key="index" class="comment_box">
+          <div v-for="(reply, indexy) in comment.reply" :key="indexy" class="comment_box">
             ㄴ
             <div class="reply">
               <span class="comment_writer2">{{ reply.replied_by }}</span>
               <span class="comment_date">{{ reply.replied_when | moment }}</span><br>
               <div class="comment_contents2">{{ reply.text }}</div>
+              {{ index }}
+              <div style="text-align: right"><i @click="deleteReply(reply._id, comment._id, index)" class="el-icon-delete"></i></div>
             </div>
           </div>
 
@@ -163,6 +165,17 @@
       },
       async deleteComment(id, postId) {
         await this.$axios.$post('/api/posts/comments/delete/' + postId, {id: id})
+          .then((response) => {
+            alert(response.message)
+          })
+          .catch((response) => {
+            alert('삭제 실패')
+          })
+        this.refreshDetail()
+      },
+      async deleteReply(id, cid, index) {
+        await this.$axios.$post('/api/posts/reply/delete/' + this.id,
+          { _id: id, cid: cid, index: index })
           .then((response) => {
             alert(response.message)
           })
