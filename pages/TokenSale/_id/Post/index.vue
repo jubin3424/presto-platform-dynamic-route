@@ -23,7 +23,9 @@
         <div v-for="(post, index) in posts" :key="index">
           <div class="post">
             <div class="title">
-              <span style="cursor: pointer;" @click="seeDetail(post._id)">{{ post.title }}</span>
+              <span style="cursor: pointer;" @click="seeDetail(post._id)">{{ post.title }}
+                <span style="font-size: 0.9rem;">({{ post.comments && post.comments.length }})</span>
+                </span>
             </div>
 
             <span>By </span>
