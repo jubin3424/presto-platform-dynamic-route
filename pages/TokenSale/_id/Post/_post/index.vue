@@ -67,7 +67,6 @@
               <span class="comment_writer2">{{ reply.replied_by }}</span>
               <span class="comment_date">{{ reply.replied_when | moment }}</span><br>
               <div class="comment_contents2">{{ reply.text }}</div>
-              {{ index }}
               <div style="text-align: right"><i @click="deleteReply(reply._id, comment._id, index)" class="el-icon-delete"></i></div>
             </div>
           </div>
