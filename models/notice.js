@@ -1,5 +1,5 @@
 let mongoose = require('mongoose')
-let Schmea = mongoose.Schema
+let Schema = mongoose.Schema
 
 let NoticeSchema = new Schema({
   user: String,

@@ -6,25 +6,7 @@
         <div class="news_title">What's New</div>
       <div class="container">
 
-        <div v-if="posts && posts.length > 0">
-          <div v-for="(post, index) in posts" :key="index">
-            <div class="post">
-              <div class="title">
-              <span style="cursor: pointer;" @click="seeDetail(post._id)">{{ post.title }}
-                <span style="font-size: 0.9rem;">({{ post.comments && post.comments.length }})</span>
-                </span>
-              </div>
-
-              <span>By </span>
-              <span class="written_by">{{ post.user }}</span>
-              <span class="post_date">{{ post.created_at | moment2 }}</span>
-              <hr style="border-color: ghostwhite; color: ghostwhite; opacity: 0.3; margin-top: 1.2rem;">
-            </div>
-          </div>
-        </div>
-        <div v-else>
-          <h1>등록된 공지사항이 없습니다.</h1>
-        </div>
+        <nuxt/>
 
       </div>
     </div>

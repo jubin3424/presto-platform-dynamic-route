@@ -19,6 +19,7 @@ const users = require('./routes/users')
 const tokens = require('./routes/token')
 const comments = require('./routes/comment')
 const posts = require('./routes/post')
+const notices = require('./routes/notice')
 const upload = require('./routes/upload')
 
 // Import API routes
@@ -32,6 +33,7 @@ app.use(tokens)
 app.use(comments)
 app.use(upload)
 app.use(posts)
+app.use(notices)
 
 
 module.exports = {
