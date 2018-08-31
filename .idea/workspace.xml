@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da277c27-f7aa-46da-9a91-ed5cb765a529" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/WhatsNew/_detail.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/WhatsNew/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/WhatsNew/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/WhatsNew/_detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/WhatsNew/_detail.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,8 +65,8 @@
           <file leaf-file-name="_detail.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/WhatsNew/_detail.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1668">
-                  <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+                <state relative-caret-position="309">
+                  <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
                   <folding>
                     <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -93,7 +92,7 @@
           <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/api/routes/post.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
+                <state relative-caret-position="-874">
                   <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
                 </state>
               </provider>
@@ -106,8 +105,8 @@
           <file leaf-file-name="notice.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/api/routes/notice.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="393">
-                  <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+                <state relative-caret-position="260">
+                  <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
@@ -257,8 +256,8 @@
         <option value="$PROJECT_DIR$/pages/WhatsNew.vue" />
         <option value="$PROJECT_DIR$/pages/WhatsNew/detail.vue" />
         <option value="$PROJECT_DIR$/pages/WhatsNew/index.vue" />
-        <option value="$PROJECT_DIR$/pages/WhatsNew/_detail.vue" />
         <option value="$PROJECT_DIR$/api/routes/notice.js" />
+        <option value="$PROJECT_DIR$/pages/WhatsNew/_detail.vue" />
       </list>
     </option>
   </component>
@@ -442,12 +441,12 @@
       <workItem from="1534123479977" duration="25142000" />
       <workItem from="1534321380890" duration="50073000" />
       <workItem from="1534821681680" duration="31915000" />
-      <workItem from="1535078366594" duration="71008000" />
+      <workItem from="1535078366594" duration="72228000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199618000" />
+    <option name="totallyTimeSpent" value="200838000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,16 +461,16 @@
     <frame x="1514" y="25" width="1793" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4904348" visible="true" weight="0.16309255" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4904348" visible="true" weight="0.16309255" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32984293" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5163657" side_tool="true" visible="true" weight="0.2628205" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51693004" side_tool="true" visible="true" weight="0.2628205" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4984" weight="0.32820514" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48363432" visible="true" weight="0.2628205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48307" visible="true" weight="0.2628205" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info id="npm" order="2" sideWeight="0.50956523" side_tool="true" visible="true" weight="0.16309255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48137698" weight="0.26794872" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.48081264" weight="0.26794872" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49945474" weight="0.3997669" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -891,22 +890,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="-874">
           <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/routes/notice.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="70" column="30" lean-forward="true" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+        <state relative-caret-position="260">
+          <caret line="85" column="6" lean-forward="true" selection-start-line="85" selection-start-column="6" selection-end-line="85" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/WhatsNew/_detail.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1668">
-          <caret line="129" column="31" lean-forward="true" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+        <state relative-caret-position="309">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />

@@ -46,6 +46,7 @@ router.post('/notices/new', (req, res) => {
   })
 })
 
+// 공지사항 댓글 추가
 router.post('/notices/comments/:id', (req, res) => {
   Notice.findByIdAndUpdate(req.params.id, {$push: {
     comments: {text: req.body.text, commented_by: req.body.commented_by,
@@ -58,7 +59,35 @@ router.post('/notices/comments/:id', (req, res) => {
   })
 })
 
-// 공지사항 댓글에 댓글 추가
+// 공지사항 댓글 삭제
+router.post('/notices/comments/delete/:id', (req, res) => {
+  Notice.findByIdAndUpdate(req.params.id, {$pull: {
+    comments: { _id: req.body.id }
+    }}, (error) => {
+    if (error) { console.log(error)}
+    res.send({
+      success: true,
+      message: '댓글이 삭제되었습니다.'
+    })
+  })
+})
+
+// 공지사항 <댓글에 댓글> 삭제
+router.post('/notices/reply/delete/:id', (req, res) => {
+  const query = 'comments.' + req.body.index + '.reply'
+  Notice.findByIdAndUpdate(req.params.id,
+    {$pull: {
+      [query]: { _id: req.body._id}
+      }}, (error) => {
+    if (error) { console.log(error) }
+    res.send({
+      success: true,
+      message: '꼬리글이 삭제되었습니다.'
+    })
+    })
+})
+
+// 공지사항 <댓글에 댓글> 추가
 router.post('/notices/reply/:id', (req, res) => {
   const query = 'comments.' + req.body.index + '.reply'
   Notice.findOneAndUpdate({
@@ -72,5 +101,6 @@ router.post('/notices/reply/:id', (req, res) => {
     })
   })
 })
+
 
 module.exports = router
