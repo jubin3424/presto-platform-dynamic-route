@@ -1,9 +1,9 @@
 <template>
     <div>
       <div class="whatsnew">
-        <!--<div class="whatsnew2">What's New</div>-->
+        <div class="whatsnew2">What's New</div>
       </div>
-        <div class="news_title">What's New</div>
+        <!--<div class="news_title">What's New</div>-->
       <div class="container">
 
         <nuxt/>
@@ -28,9 +28,15 @@
 <style scoped>
   .whatsnew {
     background-image: url('../static/img/coin/office_back.jpg');
+    /*background-image: url("../static/img/back.png");*/
     background-size: cover;
-    height: 20vh;
-    font-size: 3rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.7rem;
+    font-size: 2rem;
+    font-weight: 500;
+    /*height: 20vh;*/
+    /*font-size: 3rem;*/
     color: white;
   }
   .whatsnew2 {
