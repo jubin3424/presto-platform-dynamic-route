@@ -45,6 +45,9 @@
       async getNotices () {
         const getNotices = await this.$axios.$get('/api/notices')
         this.notices = getNotices.notices
+      },
+      seeDetail(id) {
+        this.$router.push('WhatsNew/'+id)
       }
     },
     filters: {
