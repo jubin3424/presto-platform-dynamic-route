@@ -1,7 +1,8 @@
 <template>
     <div>
-      <div style="float: right"><nuxt-link to="WhatsNew/register">등록</nuxt-link></div>
-      <div v-if="notices && notices.length > 0">
+      <div style="text-align: right; margin-top: 1rem;">
+        <nuxt-link to="WhatsNew/register"><el-button>등록</el-button></nuxt-link></div>
+      <div v-if="notices && notices.length > 0" style="margin-top: 1.5rem;">
         <div v-for="(notice, index) in notices" :key="index">
           <div class="post">
             <div class="title">

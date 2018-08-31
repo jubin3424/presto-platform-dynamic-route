@@ -7,7 +7,7 @@
       <div class="nav">
         <ul>
           <li><nuxt-link to="/">DAICO란?</nuxt-link></li>
-          <li><nuxt-link to="/">DAICO SVC</nuxt-link></li>
+          <li><nuxt-link to="/WhatsNew">WhatsNew</nuxt-link></li>
           <li><nuxt-link :to="{name: 'TokenSale'}">TokenSale</nuxt-link></li>
           <li><nuxt-link :to="{name: 'TokenRegister'}">TokenRegister</nuxt-link></li>
           <li><nuxt-link :to="{name: 'Search'}">Search</nuxt-link></li>
@@ -27,7 +27,7 @@
               <nuxt-link to="/">DAICO란?</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
-              <nuxt-link to="/">DAICO SVC</nuxt-link>
+              <nuxt-link to="/WhatsNew">WhatsNew</nuxt-link>
             </el-dropdown-item>
             <el-dropdown-item>
               <nuxt-link :to="{name: 'TokenSale'}">TokenSale</nuxt-link>
